@@ -7,6 +7,7 @@ import registerServiceWorker from './registerServiceWorker';
 
 /* Redux Tutorial Start */
 import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
 
 const productReducer = (state = [], action) => {
     return state;
@@ -40,27 +41,18 @@ const initial_state = {
     users: 'Tahmid Tanzim'
 };
 
-const store = createStore(
+const app_store = createStore(
     all_reducers,
     initial_state,
     window.devToolsExtension && window.devToolsExtension()
 );
 
-const updateUserAction = {
-  type: 'UPDATE_USER',
-  payload: {
-      user: 'Kazi Fatiha Akram'
-  }
-};
-
-store.dispatch(updateUserAction);
-
-console.log(store.getState());
-
 /* Redux Tutorial End */
 
 ReactDOM.render(
-    <App/>,
+    <Provider store={app_store}>
+        <App/>
+    </Provider>,
     document.getElementById('root')
 );
 registerServiceWorker();
