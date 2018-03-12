@@ -12,7 +12,12 @@ const productReducer = (state = [], action) => {
     return state;
 };
 
-const userReducer = (state = '', action) => {
+const userReducer = (state = '', {type, payload}) => {
+    switch (type) {
+        case 'UPDATE_USER':
+            return payload;
+            break;
+    }
     return state;
 };
 
@@ -40,6 +45,15 @@ const store = createStore(
     initial_state,
     window.devToolsExtension && window.devToolsExtension()
 );
+
+const updateUserAction = {
+  type: 'UPDATE_USER',
+  payload: {
+      user: 'Kazi Fatiha Akram'
+  }
+};
+
+store.dispatch(updateUserAction);
 
 console.log(store.getState());
 
