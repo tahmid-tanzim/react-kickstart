@@ -8,17 +8,17 @@ import registerServiceWorker from './registerServiceWorker';
 /* Redux Tutorial Start */
 import {createStore, combineReducers} from 'redux';
 
-const product_reducer = (state = [], action) => {
+const productReducer = (state = [], action) => {
     return state;
 };
 
-const user_reducer = (state = '', action) => {
+const userReducer = (state = '', action) => {
     return state;
 };
 
 const all_reducers = combineReducers({
-    products: product_reducer,
-    users: user_reducer
+    products: productReducer,
+    users: userReducer
 });
 
 const initial_state = {
@@ -35,7 +35,11 @@ const initial_state = {
     users: 'Tahmid Tanzim'
 };
 
-const store = createStore(all_reducers, initial_state);
+const store = createStore(
+    all_reducers,
+    initial_state,
+    window.devToolsExtension && window.devToolsExtension()
+);
 
 console.log(store.getState());
 
