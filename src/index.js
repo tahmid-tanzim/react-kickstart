@@ -21,7 +21,21 @@ const all_reducers = combineReducers({
     users: user_reducer
 });
 
-const store = createStore(all_reducers);
+const initial_state = {
+    products: [
+        {
+            id: 1,
+            name: 'iPhone X'
+        },
+        {
+            id: 2,
+            name: 'OnePlus 5'
+        }
+    ],
+    users: 'Tahmid Tanzim'
+};
+
+const store = createStore(all_reducers, initial_state);
 
 console.log(store.getState());
 
