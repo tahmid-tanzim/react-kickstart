@@ -6,32 +6,23 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 /* Redux Tutorial Start */
-import {createStore} from 'redux';
+import {createStore, combineReducers} from 'redux';
 
-const reducer = (state, action) => {
-    switch (action.type) {
-        case "CHANGE_STATE":
-            //TODO May be API Call is here
-            return action.payload.newState;
-            break;
-        default:
-            return 'STATE';
-            break;
-    }
+const product_reducer = (state = [], action) => {
+    return state;
 };
 
-const store = createStore(reducer);
-
-console.log(store.getState());
-
-const action = {
-  type: 'CHANGE_STATE',
-  payload: {
-      newState: 'Hello World New State'
-  }
+const user_reducer = (state = '', action) => {
+    return state;
 };
 
-store.dispatch(action);
+const all_reducers = combineReducers({
+    products: product_reducer,
+    users: user_reducer
+});
+
+const store = createStore(all_reducers);
+
 console.log(store.getState());
 
 /* Redux Tutorial End */
