@@ -23,9 +23,11 @@ export const showError = (error) => {
 
 export const getUsers = () => {
     return dispatch => {
-        axios.get('https://dog.ceo/api/breeds/list/all')
-            .then(response => {
-                console.log('Success API Response', response);
+        axios.get('https://randomuser.me/api/')
+            .then(({data, status}) => {
+                const [first_user] = data.results;
+                console.log('Success API Response', JSON.stringify(first_user, null, 2));
+                dispatch(updateUser(first_user.name.first + ' ' + first_user.name.last));
             })
             .catch(error => {
                 console.log('Error API Response', error);
