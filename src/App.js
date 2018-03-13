@@ -16,9 +16,9 @@ class App extends Component {
         this.props.onUpdateUser(e.target.value);
     }
 
-    // componentDidMount() {
-    //     this.props.onGetUsers()
-    // }
+    componentDidMount() {
+        this.props.onGetUsers()
+    }
 
     render() {
         // console.log('Hello: ', this.props);
@@ -36,9 +36,19 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = createSelector(
+const productSelector = createSelector(
     state => state.products,
+    products => products
+);
+
+const userSelector = createSelector(
     state => state.user,
+    user => user
+);
+
+const mapStateToProps = createSelector(
+    productSelector,
+    userSelector,
     (products, user) => ({products, user})
 );
 
