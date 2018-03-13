@@ -41,7 +41,7 @@ const app_store = createStore(
 
 ReactDOM.render(
     <Provider store={app_store}>
-        <App/>
+        <App title="App Component Test"/>
     </Provider>,
     document.getElementById('root')
 );

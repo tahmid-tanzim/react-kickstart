@@ -19,7 +19,7 @@ class App extends Component {
 
         return (
             <div>
-                <h1> App Component</h1>
+                <h1>{this.props.title}</h1>
                 <p>{this.props.user}</p>
                 <input type="text" className="form-control" onChange={this.onUpdateUser} />
                 <button className="btn btn-default"
@@ -30,10 +30,11 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, props) => {
     return {
         products: state.products,
-        user: state.user
+        user: state.user,
+        title: props.title
     };
 };
 
