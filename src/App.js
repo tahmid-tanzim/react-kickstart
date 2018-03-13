@@ -17,12 +17,6 @@ class App extends Component {
 
     componentDidMount() {
         this.props.onGetUsers()
-            .then(response => {
-                console.log('Success API Response', response);
-            })
-            .catch(error => {
-                console.log('Error API Response', error);
-            });
     }
 
     render() {
