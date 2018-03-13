@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 // import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {updateUser, getUsers} from './actions/user';
+import {createSelector} from 'reselect';
 
 class App extends Component {
     constructor(props) {
@@ -15,9 +16,9 @@ class App extends Component {
         this.props.onUpdateUser(e.target.value);
     }
 
-    componentDidMount() {
-        this.props.onGetUsers()
-    }
+    // componentDidMount() {
+    //     this.props.onGetUsers()
+    // }
 
     render() {
         // console.log('Hello: ', this.props);
@@ -35,13 +36,11 @@ class App extends Component {
     }
 }
 
-const mapStateToProps = (state, props) => {
-    return {
-        products: state.products,
-        user: state.user,
-        title: props.title
-    };
-};
+const mapStateToProps = createSelector(
+    state => state.products,
+    state => state.user,
+    (products, user) => ({products, user})
+);
 
 const mapActionsToProps = {
     onUpdateUser: updateUser,
