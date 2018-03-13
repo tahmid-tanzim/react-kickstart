@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import {bindActionCreators} from 'redux';
+// import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import {updateUser} from './actions/user';
+import {updateUser, getUsers} from './actions/user';
 
 class App extends Component {
     constructor(props) {
@@ -13,6 +13,16 @@ class App extends Component {
 
     onUpdateUser(e) {
         this.props.onUpdateUser(e.target.value);
+    }
+
+    componentDidMount() {
+        this.props.onGetUsers()
+            .then(response => {
+                console.log('Success API Response', response);
+            })
+            .catch(error => {
+                console.log('Error API Response', error);
+            });
     }
 
     render() {
@@ -39,21 +49,12 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapActionsToProps = (dispatch, props) => {
-    // console.log('Passed Props: ', props);
-
-    return bindActionCreators({
-        onUpdateUser: updateUser
-    }, dispatch);
-};
-
-const mergeProps = (propsFromState, propsFromDispatch, ownProps) => {
-    console.log(propsFromState, propsFromDispatch, ownProps);
-    return {};
+const mapActionsToProps = {
+    onUpdateUser: updateUser,
+    onGetUsers: getUsers
 };
 
 export default connect(
     mapStateToProps,
-    mapActionsToProps,
-    mergeProps
+    mapActionsToProps
 )(App);

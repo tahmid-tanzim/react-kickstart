@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const UPDATE_USER = 'users:updateUser';
 
 export const updateUser = newUser => {
@@ -7,4 +9,10 @@ export const updateUser = newUser => {
             user: newUser
         }
     };
+};
+
+export const getUsers = () => {
+    return dispatch => {
+        return axios.get('https://dog.ceo/api/breeds/list/all');
+    }
 };
