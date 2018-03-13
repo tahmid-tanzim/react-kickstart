@@ -9,22 +9,12 @@ import registerServiceWorker from './registerServiceWorker';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 
-const productReducer = (state = [], action) => {
-    return state;
-};
-
-const userReducer = (state = '', {type, payload}) => {
-    switch (type) {
-        case 'UPDATE_USER':
-            return payload;
-            break;
-    }
-    return state;
-};
+import productReducer from './reducers/products';
+import userReducer from './reducers/user';
 
 const all_reducers = combineReducers({
     products: productReducer,
-    users: userReducer
+    user: userReducer
 });
 
 const initial_state = {
@@ -38,7 +28,7 @@ const initial_state = {
             name: 'OnePlus 5'
         }
     ],
-    users: 'Tahmid Tanzim'
+    user: 'Tahmid Tanzim'
 };
 
 const app_store = createStore(
