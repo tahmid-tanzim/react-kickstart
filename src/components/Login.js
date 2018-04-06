@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class Login extends Component {
     render() {
@@ -16,7 +16,7 @@ class Login extends Component {
                             <input type="checkbox" value="remember-me" id="rememberMe"
                                    name="rememberMe" disabled/> Remember me
                         </label>
-                        { /*<button className="btn btn-lg btn-primary btn-block" type="submit">Login</button>*/ }
+                        {/*<button className="btn btn-lg btn-primary btn-block" type="submit">Login</button>*/}
                         <Link to="/app/settlement-reconciliation"
                               className="btn btn-lg btn-success btn-block">Login</Link>
                     </form>

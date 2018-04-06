@@ -9,8 +9,8 @@ const PrivateLayout = ({children, ...rest}) => {
             <Sidebar/>
 
             <div id="content">
-                { /*<Navbar/>*/ }
-                { children }
+                {/*<Navbar/>*/}
+                {children}
             </div>
         </div>
     );

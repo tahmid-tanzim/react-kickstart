@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Redirect, Switch} from 'react-router-dom';
 
 import PrivateLayout from './components/PrivateLayout';
 import PublicLayout from './components/PublicLayout';
@@ -10,21 +10,21 @@ import NotFound from './components/NotFound';
 
 const PrivateRoute = ({component: Component, ...rest}) => {
     return (
-        <Route { ...rest } render={ matchProps => (
+        <Route {...rest} render={matchProps => (
             <PrivateLayout>
-                <Component { ...matchProps } />
+                <Component {...matchProps} />
             </PrivateLayout>
-        ) }/>
+        )}/>
     );
 };
 
 const PublicRoute = ({component: Component, ...rest}) => {
     return (
-        <Route { ...rest } render={ matchProps => (
+        <Route {...rest} render={matchProps => (
             <PublicLayout>
-                <Component { ...matchProps } />
+                <Component {...matchProps} />
             </PublicLayout>
-        ) }/>
+        )}/>
     );
 };
 
@@ -36,9 +36,9 @@ class Main extends Component {
                     <Route exact path="/">
                         <Redirect to="/login"/>
                     </Route>
-                    <PublicRoute path="/login" component={ Login }/>
-                    <PrivateRoute path="/app/home" component={ Home }/>
-                    <Route component={ NotFound }/>
+                    <PublicRoute path="/login" component={Login}/>
+                    <PrivateRoute path="/app/home" component={Home}/>
+                    <Route component={NotFound}/>
                 </Switch>
             </Router>
         );

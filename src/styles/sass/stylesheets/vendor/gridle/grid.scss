@@ -21,18 +21,18 @@
 
 // Max size :
 .container {
-    margin: 0 auto;
-    max-width: 1890px;
+  margin: 0 auto;
+  max-width: 1890px;
 }
 
 [class*="gr-"] {
-    @include gridle_set((
-            mobile : (
-                    grid : 12,
-                    push : 0,
-                    pull : 0,
-                    prefix : 0,
-                    suffix : 0
-            )
-    ));
+  @include gridle_set((
+          mobile : (
+                  grid : 12,
+                  push : 0,
+                  pull : 0,
+                  prefix : 0,
+                  suffix : 0
+          )
+  ));
 }
