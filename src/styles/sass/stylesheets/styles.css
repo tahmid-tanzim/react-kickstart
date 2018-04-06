@@ -5056,32 +5056,32 @@ textarea:focus {
 .ball-grid-beat {
   width: 57px; }
   .ball-grid-beat > div:nth-child(1) {
-    animation-delay: -0.02s;
-    animation-duration: 1.26s; }
+    animation-delay: 0.56s;
+    animation-duration: 0.91s; }
   .ball-grid-beat > div:nth-child(2) {
-    animation-delay: 0.42s;
-    animation-duration: 1.35s; }
+    animation-delay: 0.34s;
+    animation-duration: 0.74s; }
   .ball-grid-beat > div:nth-child(3) {
-    animation-delay: 0.78s;
-    animation-duration: 0.68s; }
+    animation-delay: 0.4s;
+    animation-duration: 1.42s; }
   .ball-grid-beat > div:nth-child(4) {
-    animation-delay: 0.7s;
-    animation-duration: 1.48s; }
+    animation-delay: 0.5s;
+    animation-duration: 0.84s; }
   .ball-grid-beat > div:nth-child(5) {
-    animation-delay: 0.45s;
-    animation-duration: 1.27s; }
+    animation-delay: 0.58s;
+    animation-duration: 0.87s; }
   .ball-grid-beat > div:nth-child(6) {
-    animation-delay: 0.65s;
-    animation-duration: 0.89s; }
+    animation-delay: 0.57s;
+    animation-duration: 0.99s; }
   .ball-grid-beat > div:nth-child(7) {
-    animation-delay: 0.72s;
-    animation-duration: 0.79s; }
+    animation-delay: 0.28s;
+    animation-duration: 0.91s; }
   .ball-grid-beat > div:nth-child(8) {
-    animation-delay: 0.48s;
-    animation-duration: 0.66s; }
+    animation-delay: 0.74s;
+    animation-duration: 0.85s; }
   .ball-grid-beat > div:nth-child(9) {
-    animation-delay: 0.16s;
-    animation-duration: 1.3s; }
+    animation-delay: -0.03s;
+    animation-duration: 0.7s; }
   .ball-grid-beat > div {
     background-color: #1bb1a2;
     width: 15px;
@@ -5107,32 +5107,32 @@ textarea:focus {
 .ball-grid-pulse {
   width: 57px; }
   .ball-grid-pulse > div:nth-child(1) {
-    animation-delay: 0.64s;
-    animation-duration: 0.74s; }
+    animation-delay: 0.13s;
+    animation-duration: 1.14s; }
   .ball-grid-pulse > div:nth-child(2) {
-    animation-delay: 0.63s;
-    animation-duration: 1.07s; }
+    animation-delay: 0.47s;
+    animation-duration: 1.31s; }
   .ball-grid-pulse > div:nth-child(3) {
-    animation-delay: 0.08s;
-    animation-duration: 0.89s; }
+    animation-delay: 0.76s;
+    animation-duration: 0.91s; }
   .ball-grid-pulse > div:nth-child(4) {
-    animation-delay: 0.27s;
-    animation-duration: 1.26s; }
+    animation-delay: 0.28s;
+    animation-duration: 1.59s; }
   .ball-grid-pulse > div:nth-child(5) {
-    animation-delay: 0.52s;
-    animation-duration: 1.58s; }
+    animation-delay: 0.07s;
+    animation-duration: 1.12s; }
   .ball-grid-pulse > div:nth-child(6) {
-    animation-delay: 0.43s;
-    animation-duration: 0.87s; }
+    animation-delay: 0.48s;
+    animation-duration: 0.85s; }
   .ball-grid-pulse > div:nth-child(7) {
-    animation-delay: 0.54s;
-    animation-duration: 0.76s; }
+    animation-delay: -0.07s;
+    animation-duration: 0.7s; }
   .ball-grid-pulse > div:nth-child(8) {
-    animation-delay: -0.05s;
-    animation-duration: 0.94s; }
+    animation-delay: 0.02s;
+    animation-duration: 1.3s; }
   .ball-grid-pulse > div:nth-child(9) {
-    animation-delay: 0.26s;
-    animation-duration: 0.98s; }
+    animation-delay: 0.24s;
+    animation-duration: 1.24s; }
   .ball-grid-pulse > div {
     background-color: #1bb1a2;
     width: 15px;
@@ -5360,17 +5360,17 @@ textarea:focus {
   100% {
     transform: scale(1); } }
 .line-scale-party > div:nth-child(1) {
-  animation-delay: 0.52s;
-  animation-duration: 1.29s; }
+  animation-delay: 0.2s;
+  animation-duration: 0.45s; }
 .line-scale-party > div:nth-child(2) {
-  animation-delay: 0.08s;
-  animation-duration: 0.65s; }
+  animation-delay: 0.39s;
+  animation-duration: 0.34s; }
 .line-scale-party > div:nth-child(3) {
-  animation-delay: -0.02s;
-  animation-duration: 0.59s; }
+  animation-delay: 0.63s;
+  animation-duration: 1.02s; }
 .line-scale-party > div:nth-child(4) {
-  animation-delay: 0.02s;
-  animation-duration: 0.51s; }
+  animation-delay: -0.06s;
+  animation-duration: 0.41s; }
 .line-scale-party > div {
   background-color: #1bb1a2;
   width: 4px;
@@ -7701,9 +7701,9 @@ i, span {
     outline: 1px solid #ddd;
     border-radius: 4px; }
 
-.iPayDateRangePicker .PresetDateRangePicker_panel {
+.DateRangePicker .PresetDateRangePicker_panel {
   padding: 0 22px 11px; }
-.iPayDateRangePicker .PresetDateRangePicker_button {
+.DateRangePicker .PresetDateRangePicker_button {
   position: relative;
   height: 100%;
   text-align: center;
@@ -7719,25 +7719,25 @@ i, span {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer; }
-.iPayDateRangePicker .PresetDateRangePicker_button:active {
+.DateRangePicker .PresetDateRangePicker_button:active {
   outline: 0; }
-.iPayDateRangePicker .PresetDateRangePicker_button__selected {
+.DateRangePicker .PresetDateRangePicker_button__selected {
   color: #fff;
   background: #00a699; }
-.iPayDateRangePicker .SingleDatePickerInput {
+.DateRangePicker .SingleDatePickerInput {
   display: inline-block;
   background-color: #fff; }
-.iPayDateRangePicker .SingleDatePickerInput__withBorder {
+.DateRangePicker .SingleDatePickerInput__withBorder {
   border: 1px solid #dbdbdb; }
-.iPayDateRangePicker .SingleDatePickerInput__rtl {
+.DateRangePicker .SingleDatePickerInput__rtl {
   direction: rtl; }
-.iPayDateRangePicker .SingleDatePickerInput__disabled {
+.DateRangePicker .SingleDatePickerInput__disabled {
   background-color: #f2f2f2; }
-.iPayDateRangePicker .SingleDatePickerInput__block {
+.DateRangePicker .SingleDatePickerInput__block {
   display: block; }
-.iPayDateRangePicker .SingleDatePickerInput__showClearDate {
+.DateRangePicker .SingleDatePickerInput__showClearDate {
   padding-right: 30px; }
-.iPayDateRangePicker .SingleDatePickerInput_clearDate {
+.DateRangePicker .SingleDatePickerInput_clearDate {
   background: 0 0;
   border: 0;
   color: inherit;
@@ -7753,22 +7753,22 @@ i, span {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
-.iPayDateRangePicker .SingleDatePickerInput_clearDate__default:focus,
-.iPayDateRangePicker .SingleDatePickerInput_clearDate__default:hover {
+.DateRangePicker .SingleDatePickerInput_clearDate__default:focus,
+.DateRangePicker .SingleDatePickerInput_clearDate__default:hover {
   background: #dbdbdb;
   border-radius: 50%; }
-.iPayDateRangePicker .SingleDatePickerInput_clearDate__small {
+.DateRangePicker .SingleDatePickerInput_clearDate__small {
   padding: 6px; }
-.iPayDateRangePicker .SingleDatePickerInput_clearDate__hide {
+.DateRangePicker .SingleDatePickerInput_clearDate__hide {
   visibility: hidden; }
-.iPayDateRangePicker .SingleDatePickerInput_clearDate_svg {
+.DateRangePicker .SingleDatePickerInput_clearDate_svg {
   fill: #82888a;
   height: 12px;
   width: 15px;
   vertical-align: middle; }
-.iPayDateRangePicker .SingleDatePickerInput_clearDate_svg__small {
+.DateRangePicker .SingleDatePickerInput_clearDate_svg__small {
   height: 9px; }
-.iPayDateRangePicker .SingleDatePickerInput_calendarIcon {
+.DateRangePicker .SingleDatePickerInput_calendarIcon {
   background: 0 0;
   border: 0;
   color: inherit;
@@ -7780,36 +7780,36 @@ i, span {
   vertical-align: middle;
   padding: 10px;
   margin: 0 5px 0 10px; }
-.iPayDateRangePicker .SingleDatePickerInput_calendarIcon_svg {
+.DateRangePicker .SingleDatePickerInput_calendarIcon_svg {
   fill: #82888a;
   height: 15px;
   width: 14px;
   vertical-align: middle; }
-.iPayDateRangePicker .SingleDatePicker {
+.DateRangePicker .SingleDatePicker {
   position: relative;
   display: inline-block; }
-.iPayDateRangePicker .SingleDatePicker__block {
+.DateRangePicker .SingleDatePicker__block {
   display: block; }
-.iPayDateRangePicker .SingleDatePicker_picker {
+.DateRangePicker .SingleDatePicker_picker {
   z-index: 1;
   background-color: #fff;
   position: absolute; }
-.iPayDateRangePicker .SingleDatePicker_picker__rtl {
+.DateRangePicker .SingleDatePicker_picker__rtl {
   direction: rtl; }
-.iPayDateRangePicker .SingleDatePicker_picker__directionLeft {
+.DateRangePicker .SingleDatePicker_picker__directionLeft {
   left: 0; }
-.iPayDateRangePicker .SingleDatePicker_picker__directionRight {
+.DateRangePicker .SingleDatePicker_picker__directionRight {
   right: 0; }
-.iPayDateRangePicker .SingleDatePicker_picker__portal {
+.DateRangePicker .SingleDatePicker_picker__portal {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%; }
-.iPayDateRangePicker .SingleDatePicker_picker__fullScreenPortal {
+.DateRangePicker .SingleDatePicker_picker__fullScreenPortal {
   background-color: #fff; }
-.iPayDateRangePicker .SingleDatePicker_closeButton {
+.DateRangePicker .SingleDatePicker_closeButton {
   background: 0 0;
   border: 0;
   color: inherit;
@@ -7822,15 +7822,15 @@ i, span {
   right: 0;
   padding: 15px;
   z-index: 2; }
-.iPayDateRangePicker .SingleDatePicker_closeButton:focus,
-.iPayDateRangePicker .SingleDatePicker_closeButton:hover {
+.DateRangePicker .SingleDatePicker_closeButton:focus,
+.DateRangePicker .SingleDatePicker_closeButton:hover {
   color: #b0b3b4;
   text-decoration: none; }
-.iPayDateRangePicker .SingleDatePicker_closeButton_svg {
+.DateRangePicker .SingleDatePicker_closeButton_svg {
   height: 15px;
   width: 15px;
   fill: #cacccd; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_buttonReset {
+.DateRangePicker .DayPickerKeyboardShortcuts_buttonReset {
   background: 0 0;
   border: 0;
   border-radius: 0;
@@ -7841,46 +7841,46 @@ i, span {
   padding: 0;
   cursor: pointer;
   font-size: 14px; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_buttonReset:active {
+.DateRangePicker .DayPickerKeyboardShortcuts_buttonReset:active {
   outline: 0; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_show {
+.DateRangePicker .DayPickerKeyboardShortcuts_show {
   width: 22px;
   position: absolute;
   z-index: 2; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_show__bottomRight {
+.DateRangePicker .DayPickerKeyboardShortcuts_show__bottomRight {
   border-top: 26px solid transparent;
   border-right: 33px solid #00a699;
   bottom: 0;
   right: 0; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_show__bottomRight:hover {
+.DateRangePicker .DayPickerKeyboardShortcuts_show__bottomRight:hover {
   border-right: 33px solid #008489; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_show__topRight {
+.DateRangePicker .DayPickerKeyboardShortcuts_show__topRight {
   border-bottom: 26px solid transparent;
   border-right: 33px solid #00a699;
   top: 0;
   right: 0; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_show__topRight:hover {
+.DateRangePicker .DayPickerKeyboardShortcuts_show__topRight:hover {
   border-right: 33px solid #008489; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_show__topLeft {
+.DateRangePicker .DayPickerKeyboardShortcuts_show__topLeft {
   border-bottom: 26px solid transparent;
   border-left: 33px solid #00a699;
   top: 0;
   left: 0; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_show__topLeft:hover {
+.DateRangePicker .DayPickerKeyboardShortcuts_show__topLeft:hover {
   border-left: 33px solid #008489; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_showSpan {
+.DateRangePicker .DayPickerKeyboardShortcuts_showSpan {
   color: #fff;
   position: absolute; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_showSpan__bottomRight {
+.DateRangePicker .DayPickerKeyboardShortcuts_showSpan__bottomRight {
   bottom: 0;
   right: -28px; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_showSpan__topRight {
+.DateRangePicker .DayPickerKeyboardShortcuts_showSpan__topRight {
   top: 1px;
   right: -28px; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_showSpan__topLeft {
+.DateRangePicker .DayPickerKeyboardShortcuts_showSpan__topLeft {
   top: 1px;
   left: -28px; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_panel {
+.DateRangePicker .DayPickerKeyboardShortcuts_panel {
   overflow: auto;
   background: #fff;
   border: 1px solid #dbdbdb;
@@ -7893,108 +7893,108 @@ i, span {
   z-index: 2;
   padding: 22px;
   margin: 33px; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_title {
+.DateRangePicker .DayPickerKeyboardShortcuts_title {
   font-size: 16px;
   font-weight: 700;
   margin: 0; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_list {
+.DateRangePicker .DayPickerKeyboardShortcuts_list {
   list-style: none;
   padding: 0;
   font-size: 14px; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_close {
+.DateRangePicker .DayPickerKeyboardShortcuts_close {
   position: absolute;
   right: 22px;
   top: 22px;
   z-index: 2; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_close:active {
+.DateRangePicker .DayPickerKeyboardShortcuts_close:active {
   outline: 0; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_closeSvg {
+.DateRangePicker .DayPickerKeyboardShortcuts_closeSvg {
   height: 15px;
   width: 15px;
   fill: #cacccd; }
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_closeSvg:focus,
-.iPayDateRangePicker .DayPickerKeyboardShortcuts_closeSvg:hover {
+.DateRangePicker .DayPickerKeyboardShortcuts_closeSvg:focus,
+.DateRangePicker .DayPickerKeyboardShortcuts_closeSvg:hover {
   fill: #82888a; }
-.iPayDateRangePicker .CalendarDay {
+.DateRangePicker .CalendarDay {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   cursor: pointer;
   font-size: 14px;
   text-align: center; }
-.iPayDateRangePicker .CalendarDay:active {
+.DateRangePicker .CalendarDay:active {
   outline: 0; }
-.iPayDateRangePicker .CalendarDay__defaultCursor {
+.DateRangePicker .CalendarDay__defaultCursor {
   cursor: default; }
-.iPayDateRangePicker .CalendarDay__default {
+.DateRangePicker .CalendarDay__default {
   border: 1px solid #e4e7e7;
   color: #565a5c;
   background: #fff; }
-.iPayDateRangePicker .CalendarDay__default:hover {
+.DateRangePicker .CalendarDay__default:hover {
   background: #e4e7e7;
   border: 1px double #e4e7e7;
   color: inherit; }
-.iPayDateRangePicker .CalendarDay__hovered_offset {
+.DateRangePicker .CalendarDay__hovered_offset {
   background: #f4f5f5;
   border: 1px double #e4e7e7;
   color: inherit; }
-.iPayDateRangePicker .CalendarDay__outside {
+.DateRangePicker .CalendarDay__outside {
   border: 0;
   background: #fff;
   color: #565a5c; }
-.iPayDateRangePicker .CalendarDay__blocked_minimum_nights {
+.DateRangePicker .CalendarDay__blocked_minimum_nights {
   background: #fff;
   border: 1px solid #eceeee;
   color: #cacccd; }
-.iPayDateRangePicker .CalendarDay__blocked_minimum_nights:active,
-.iPayDateRangePicker .CalendarDay__blocked_minimum_nights:hover {
+.DateRangePicker .CalendarDay__blocked_minimum_nights:active,
+.DateRangePicker .CalendarDay__blocked_minimum_nights:hover {
   background: #fff;
   color: #cacccd; }
-.iPayDateRangePicker .CalendarDay__highlighted_calendar {
+.DateRangePicker .CalendarDay__highlighted_calendar {
   background: #ffe8bc;
   color: #565a5c; }
-.iPayDateRangePicker .CalendarDay__highlighted_calendar:active,
-.iPayDateRangePicker .CalendarDay__highlighted_calendar:hover {
+.DateRangePicker .CalendarDay__highlighted_calendar:active,
+.DateRangePicker .CalendarDay__highlighted_calendar:hover {
   background: #ffce71;
   color: #565a5c; }
-.iPayDateRangePicker .CalendarDay__selected_span {
+.DateRangePicker .CalendarDay__selected_span {
   background: #66e2da;
   border: 1px solid #33dacd;
   color: #fff; }
-.iPayDateRangePicker .CalendarDay__selected_span:active,
-.iPayDateRangePicker .CalendarDay__selected_span:hover {
+.DateRangePicker .CalendarDay__selected_span:active,
+.DateRangePicker .CalendarDay__selected_span:hover {
   background: #33dacd;
   border: 1px solid #33dacd;
   color: #fff; }
-.iPayDateRangePicker .CalendarDay__last_in_range {
+.DateRangePicker .CalendarDay__last_in_range {
   border-right: #00a699; }
-.iPayDateRangePicker .CalendarDay__selected,
-.iPayDateRangePicker .CalendarDay__selected:active,
-.iPayDateRangePicker .CalendarDay__selected:hover {
+.DateRangePicker .CalendarDay__selected,
+.DateRangePicker .CalendarDay__selected:active,
+.DateRangePicker .CalendarDay__selected:hover {
   background: #00a699;
   border: 1px solid #00a699;
   color: #fff; }
-.iPayDateRangePicker .CalendarDay__hovered_span,
-.iPayDateRangePicker .CalendarDay__hovered_span:hover {
+.DateRangePicker .CalendarDay__hovered_span,
+.DateRangePicker .CalendarDay__hovered_span:hover {
   background: #b2f1ec;
   border: 1px solid #80e8e0;
   color: #007a87; }
-.iPayDateRangePicker .CalendarDay__hovered_span:active {
+.DateRangePicker .CalendarDay__hovered_span:active {
   background: #80e8e0;
   border: 1px solid #80e8e0;
   color: #007a87; }
-.iPayDateRangePicker .CalendarDay__blocked_calendar,
-.iPayDateRangePicker .CalendarDay__blocked_calendar:active,
-.iPayDateRangePicker .CalendarDay__blocked_calendar:hover {
+.DateRangePicker .CalendarDay__blocked_calendar,
+.DateRangePicker .CalendarDay__blocked_calendar:active,
+.DateRangePicker .CalendarDay__blocked_calendar:hover {
   background: #cacccd;
   border: 1px solid #cacccd;
   color: #82888a; }
-.iPayDateRangePicker .CalendarDay__blocked_out_of_range,
-.iPayDateRangePicker .CalendarDay__blocked_out_of_range:active,
-.iPayDateRangePicker .CalendarDay__blocked_out_of_range:hover {
+.DateRangePicker .CalendarDay__blocked_out_of_range,
+.DateRangePicker .CalendarDay__blocked_out_of_range:active,
+.DateRangePicker .CalendarDay__blocked_out_of_range:hover {
   background: #fff;
   border: 1px solid #e4e7e7;
   color: #cacccd; }
-.iPayDateRangePicker .CalendarMonth {
+.DateRangePicker .CalendarMonth {
   background: #fff;
   text-align: center;
   padding: 0 13px;
@@ -8003,48 +8003,48 @@ i, span {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-.iPayDateRangePicker .CalendarMonth_table {
+.DateRangePicker .CalendarMonth_table {
   border-collapse: collapse;
   border-spacing: 0; }
-.iPayDateRangePicker .CalendarMonth_caption {
+.DateRangePicker .CalendarMonth_caption {
   color: #565a5c;
   font-size: 18px;
   text-align: center;
   padding-top: 22px;
   padding-bottom: 37px;
   caption-side: initial; }
-.iPayDateRangePicker .CalendarMonth_caption__verticalScrollable {
+.DateRangePicker .CalendarMonth_caption__verticalScrollable {
   padding-top: 12px;
   padding-bottom: 7px; }
-.iPayDateRangePicker .CalendarMonthGrid {
+.DateRangePicker .CalendarMonthGrid {
   background: #fff;
   text-align: left;
   z-index: 0; }
-.iPayDateRangePicker .CalendarMonthGrid__animating {
+.DateRangePicker .CalendarMonthGrid__animating {
   z-index: 1; }
-.iPayDateRangePicker .CalendarMonthGrid__horizontal {
+.DateRangePicker .CalendarMonthGrid__horizontal {
   position: absolute;
   left: 9px; }
-.iPayDateRangePicker .CalendarMonthGrid__vertical {
+.DateRangePicker .CalendarMonthGrid__vertical {
   margin: 0 auto; }
-.iPayDateRangePicker .CalendarMonthGrid__vertical_scrollable {
+.DateRangePicker .CalendarMonthGrid__vertical_scrollable {
   margin: 0 auto;
   overflow-y: scroll; }
-.iPayDateRangePicker .CalendarMonthGrid_month__horizontal {
+.DateRangePicker .CalendarMonthGrid_month__horizontal {
   display: inline-block;
   vertical-align: top;
   min-height: 100%; }
-.iPayDateRangePicker .CalendarMonthGrid_month__hideForAnimation {
+.DateRangePicker .CalendarMonthGrid_month__hideForAnimation {
   position: absolute;
   z-index: -1;
   opacity: 0;
   pointer-events: none; }
-.iPayDateRangePicker .CalendarMonthGrid_month__hidden {
+.DateRangePicker .CalendarMonthGrid_month__hidden {
   visibility: hidden; }
-.iPayDateRangePicker .DayPickerNavigation_container {
+.DateRangePicker .DayPickerNavigation_container {
   position: relative;
   z-index: 2; }
-.iPayDateRangePicker .DayPickerNavigation_container__vertical {
+.DateRangePicker .DayPickerNavigation_container__vertical {
   background: #fff;
   box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
   position: absolute;
@@ -8052,92 +8052,92 @@ i, span {
   left: 0;
   height: 52px;
   width: 100%; }
-.iPayDateRangePicker .DayPickerNavigation_container__verticalScrollable {
+.DateRangePicker .DayPickerNavigation_container__verticalScrollable {
   position: relative; }
-.iPayDateRangePicker .DayPickerNavigation_button {
+.DateRangePicker .DayPickerNavigation_button {
   cursor: pointer;
   line-height: .78;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-.iPayDateRangePicker .DayPickerNavigation_button__default {
+.DateRangePicker .DayPickerNavigation_button__default {
   border: 1px solid #e4e7e7;
   background-color: #fff;
   color: #757575; }
-.iPayDateRangePicker .DayPickerNavigation_button__default:focus,
-.iPayDateRangePicker .DayPickerNavigation_button__default:hover {
+.DateRangePicker .DayPickerNavigation_button__default:focus,
+.DateRangePicker .DayPickerNavigation_button__default:hover {
   border: 1px solid #c4c4c4; }
-.iPayDateRangePicker .DayPickerNavigation_button__default:active {
+.DateRangePicker .DayPickerNavigation_button__default:active {
   background: #f2f2f2; }
-.iPayDateRangePicker .DayPickerNavigation_button__horizontal {
+.DateRangePicker .DayPickerNavigation_button__horizontal {
   border-radius: 3px;
   padding: 6px 9px;
   top: 18px;
   position: absolute; }
-.iPayDateRangePicker .DayPickerNavigation_leftButton__horizontal {
+.DateRangePicker .DayPickerNavigation_leftButton__horizontal {
   left: 22px; }
-.iPayDateRangePicker .DayPickerNavigation_rightButton__horizontal {
+.DateRangePicker .DayPickerNavigation_rightButton__horizontal {
   right: 22px; }
-.iPayDateRangePicker .DayPickerNavigation_button__vertical {
+.DateRangePicker .DayPickerNavigation_button__vertical {
   display: inline-block;
   position: relative;
   height: 100%;
   width: 50%; }
-.iPayDateRangePicker .DayPickerNavigation_button__vertical__default {
+.DateRangePicker .DayPickerNavigation_button__vertical__default {
   padding: 5px; }
-.iPayDateRangePicker .DayPickerNavigation_nextButton__vertical__default {
+.DateRangePicker .DayPickerNavigation_nextButton__vertical__default {
   border-left: 0; }
-.iPayDateRangePicker .DayPickerNavigation_nextButton__verticalScrollable {
+.DateRangePicker .DayPickerNavigation_nextButton__verticalScrollable {
   width: 100%; }
-.iPayDateRangePicker .DayPickerNavigation_svg__horizontal {
+.DateRangePicker .DayPickerNavigation_svg__horizontal {
   height: 19px;
   width: 19px;
   fill: #82888a; }
-.iPayDateRangePicker .DayPickerNavigation_svg__vertical {
+.DateRangePicker .DayPickerNavigation_svg__vertical {
   height: 42px;
   width: 42px;
   fill: #565a5c; }
-.iPayDateRangePicker .DayPicker {
+.DateRangePicker .DayPicker {
   background: #fff;
   position: relative;
   text-align: left; }
-.iPayDateRangePicker .DayPicker__horizontal {
+.DateRangePicker .DayPicker__horizontal {
   background: #fff; }
-.iPayDateRangePicker .DayPicker__verticalScrollable {
+.DateRangePicker .DayPicker__verticalScrollable {
   height: 100%; }
-.iPayDateRangePicker .DayPicker__hidden {
+.DateRangePicker .DayPicker__hidden {
   visibility: hidden; }
-.iPayDateRangePicker .DayPicker__withBorder {
+.DateRangePicker .DayPicker__withBorder {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.07);
   border-radius: 3px; }
-.iPayDateRangePicker .DayPicker_portal__horizontal {
+.DateRangePicker .DayPicker_portal__horizontal {
   box-shadow: none;
   position: absolute;
   left: 50%;
   top: 50%; }
-.iPayDateRangePicker .DayPicker_portal__vertical {
+.DateRangePicker .DayPicker_portal__vertical {
   position: initial; }
-.iPayDateRangePicker .DayPicker_focusRegion {
+.DateRangePicker .DayPicker_focusRegion {
   outline: 0; }
-.iPayDateRangePicker .DayPicker_calendarInfo__horizontal,
-.iPayDateRangePicker .DayPicker_wrapper__horizontal {
+.DateRangePicker .DayPicker_calendarInfo__horizontal,
+.DateRangePicker .DayPicker_wrapper__horizontal {
   display: inline-block;
   vertical-align: top; }
-.iPayDateRangePicker .DayPicker_weekHeaders {
+.DateRangePicker .DayPicker_weekHeaders {
   position: relative; }
-.iPayDateRangePicker .DayPicker_weekHeaders__horizontal {
+.DateRangePicker .DayPicker_weekHeaders__horizontal {
   margin-left: 9px; }
-.iPayDateRangePicker .DayPicker_weekHeader {
+.DateRangePicker .DayPicker_weekHeader {
   color: #757575;
   position: absolute;
   top: 62px;
   z-index: 2;
   padding: 0 13px;
   text-align: left; }
-.iPayDateRangePicker .DayPicker_weekHeader__vertical {
+.DateRangePicker .DayPicker_weekHeader__vertical {
   left: 50%; }
-.iPayDateRangePicker .DayPicker_weekHeader__verticalScrollable {
+.DateRangePicker .DayPicker_weekHeader__verticalScrollable {
   top: 0;
   display: table-row;
   border-bottom: 1px solid #dbdbdb;
@@ -8146,27 +8146,27 @@ i, span {
   left: 0;
   width: 100%;
   text-align: center; }
-.iPayDateRangePicker .DayPicker_weekHeader_ul {
+.DateRangePicker .DayPicker_weekHeader_ul {
   list-style: none;
   margin: 1px 0;
   padding-left: 0;
   padding-right: 0;
   font-size: 14px; }
-.iPayDateRangePicker .DayPicker_weekHeader_li {
+.DateRangePicker .DayPicker_weekHeader_li {
   display: inline-block;
   text-align: center; }
-.iPayDateRangePicker .DayPicker_transitionContainer {
+.DateRangePicker .DayPicker_transitionContainer {
   position: relative;
   overflow: hidden;
   border-radius: 3px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
-.iPayDateRangePicker .DayPicker_transitionContainer__horizontal {
+.DateRangePicker .DayPicker_transitionContainer__horizontal {
   -webkit-transition: height .2s ease-in-out;
   -moz-transition: height .2s ease-in-out;
   transition: height .2s ease-in-out; }
-.iPayDateRangePicker .DayPicker_transitionContainer__vertical {
+.DateRangePicker .DayPicker_transitionContainer__vertical {
   width: 100%; }
-.iPayDateRangePicker .DayPicker_transitionContainer__verticalScrollable {
+.DateRangePicker .DayPicker_transitionContainer__verticalScrollable {
   padding-top: 20px;
   height: 100%;
   position: absolute;
@@ -8175,7 +8175,7 @@ i, span {
   right: 0;
   left: 0;
   overflow-y: scroll; }
-.iPayDateRangePicker .DateInput {
+.DateRangePicker .DateInput {
   margin: 0;
   padding: 0;
   background: #fff;
@@ -8183,14 +8183,14 @@ i, span {
   display: inline-block;
   width: 130px;
   vertical-align: middle; }
-.iPayDateRangePicker .DateInput__small {
+.DateRangePicker .DateInput__small {
   width: 90px; }
-.iPayDateRangePicker .DateInput__block {
+.DateRangePicker .DateInput__block {
   width: 100%; }
-.iPayDateRangePicker .DateInput__disabled {
+.DateRangePicker .DateInput__disabled {
   background: #f2f2f2;
   color: #dbdbdb; }
-.iPayDateRangePicker .DateInput_input {
+.DateRangePicker .DateInput_input {
   font-weight: 200;
   font-size: 16px;
   line-height: 24px;
@@ -8199,27 +8199,27 @@ i, span {
   width: 100%;
   padding: 13px 12px 11px;
   border: 0; }
-  .iPayDateRangePicker .DateInput_input:hover {
+  .DateRangePicker .DateInput_input:hover {
     border: inherit; }
-.iPayDateRangePicker .DateInput_input__small {
+.DateRangePicker .DateInput_input__small {
   font-size: 14px;
   line-height: 18px;
   padding: 8px 8px 6px; }
-.iPayDateRangePicker .DateInput_input__regular {
+.DateRangePicker .DateInput_input__regular {
   font-weight: auto; }
-.iPayDateRangePicker .DateInput_input__readOnly {
+.DateRangePicker .DateInput_input__readOnly {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-.iPayDateRangePicker .DateInput_input__focused {
+.DateRangePicker .DateInput_input__focused {
   outline: 0;
   background: #fff;
   border: 0; }
-.iPayDateRangePicker .DateInput_input__disabled {
+.DateRangePicker .DateInput_input__disabled {
   background: #f2f2f2;
   font-style: italic; }
-.iPayDateRangePicker .DateInput_screenReaderMessage {
+.DateRangePicker .DateInput_screenReaderMessage {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -8228,42 +8228,42 @@ i, span {
   padding: 0;
   position: absolute;
   width: 1px; }
-.iPayDateRangePicker .DateInput_fang {
+.DateRangePicker .DateInput_fang {
   position: absolute;
   width: 20px;
   height: 10px;
   left: 22px;
   z-index: 2; }
-.iPayDateRangePicker .DateInput_fangShape {
+.DateRangePicker .DateInput_fangShape {
   fill: #fff; }
-.iPayDateRangePicker .DateInput_fangStroke {
+.DateRangePicker .DateInput_fangStroke {
   stroke: #dbdbdb;
   fill: transparent; }
-.iPayDateRangePicker .DateRangePickerInput {
+.DateRangePicker .DateRangePickerInput {
   background-color: #fff;
   display: inline-block; }
-.iPayDateRangePicker .DateRangePickerInput__disabled {
+.DateRangePicker .DateRangePickerInput__disabled {
   background: #f2f2f2; }
-.iPayDateRangePicker .DateRangePickerInput__withBorder {
+.DateRangePicker .DateRangePickerInput__withBorder {
   border: 1px solid #cacccd; }
-.iPayDateRangePicker .DateRangePickerInput__rtl {
+.DateRangePicker .DateRangePickerInput__rtl {
   direction: rtl; }
-.iPayDateRangePicker .DateRangePickerInput__block {
+.DateRangePicker .DateRangePickerInput__block {
   display: block; }
-.iPayDateRangePicker .DateRangePickerInput__showClearDates {
+.DateRangePicker .DateRangePickerInput__showClearDates {
   padding-right: 30px; }
-.iPayDateRangePicker .DateRangePickerInput_arrow {
+.DateRangePicker .DateRangePickerInput_arrow {
   display: inline-block;
   vertical-align: middle; }
-.iPayDateRangePicker .DateRangePickerInput_arrow_svg {
+.DateRangePicker .DateRangePickerInput_arrow_svg {
   vertical-align: middle;
   fill: #565a5c;
   height: 24px;
   width: 24px; }
-.iPayDateRangePicker .DateRangePickerInput_arrow_svg__small {
+.DateRangePicker .DateRangePickerInput_arrow_svg__small {
   height: 19px;
   width: 19px; }
-.iPayDateRangePicker .DateRangePickerInput_clearDates {
+.DateRangePicker .DateRangePickerInput_clearDates {
   background: 0 0;
   border: 0;
   color: inherit;
@@ -8279,22 +8279,22 @@ i, span {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
-.iPayDateRangePicker .DateRangePickerInput_clearDates__small {
+.DateRangePicker .DateRangePickerInput_clearDates__small {
   padding: 6px; }
-.iPayDateRangePicker .DateRangePickerInput_clearDates_default:focus,
-.iPayDateRangePicker .DateRangePickerInput_clearDates_default:hover {
+.DateRangePicker .DateRangePickerInput_clearDates_default:focus,
+.DateRangePicker .DateRangePickerInput_clearDates_default:hover {
   background: #dbdbdb;
   border-radius: 50%; }
-.iPayDateRangePicker .DateRangePickerInput_clearDates__hide {
+.DateRangePicker .DateRangePickerInput_clearDates__hide {
   visibility: hidden; }
-.iPayDateRangePicker .DateRangePickerInput_clearDates_svg {
+.DateRangePicker .DateRangePickerInput_clearDates_svg {
   fill: #82888a;
   height: 15px;
   width: 15px;
   vertical-align: middle; }
-.iPayDateRangePicker .DateRangePickerInput_clearDates_svg__small {
+.DateRangePicker .DateRangePickerInput_clearDates_svg__small {
   height: 9px; }
-.iPayDateRangePicker .DateRangePickerInput_calendarIcon {
+.DateRangePicker .DateRangePickerInput_calendarIcon {
   background: 0 0;
   border: 0;
   color: inherit;
@@ -8306,36 +8306,36 @@ i, span {
   vertical-align: middle;
   padding: 10px;
   margin: 0 5px 0 10px; }
-.iPayDateRangePicker .DateRangePickerInput_calendarIcon_svg {
+.DateRangePicker .DateRangePickerInput_calendarIcon_svg {
   fill: #82888a;
   height: 15px;
   width: 14px;
   vertical-align: middle; }
-.iPayDateRangePicker .DateRangePicker {
+.DateRangePicker .DateRangePicker {
   position: relative;
   display: inline-block; }
-.iPayDateRangePicker .DateRangePicker__block {
+.DateRangePicker .DateRangePicker__block {
   display: block; }
-.iPayDateRangePicker .DateRangePicker_picker {
+.DateRangePicker .DateRangePicker_picker {
   z-index: 1;
   background-color: #fff;
   position: absolute; }
-.iPayDateRangePicker .DateRangePicker_picker__rtl {
+.DateRangePicker .DateRangePicker_picker__rtl {
   direction: rtl; }
-.iPayDateRangePicker .DateRangePicker_picker__directionLeft {
+.DateRangePicker .DateRangePicker_picker__directionLeft {
   left: 0; }
-.iPayDateRangePicker .DateRangePicker_picker__directionRight {
+.DateRangePicker .DateRangePicker_picker__directionRight {
   right: 0; }
-.iPayDateRangePicker .DateRangePicker_picker__portal {
+.DateRangePicker .DateRangePicker_picker__portal {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%; }
-.iPayDateRangePicker .DateRangePicker_picker__fullScreenPortal {
+.DateRangePicker .DateRangePicker_picker__fullScreenPortal {
   background-color: #fff; }
-.iPayDateRangePicker .DateRangePicker_closeButton {
+.DateRangePicker .DateRangePicker_closeButton {
   background: 0 0;
   border: 0;
   color: inherit;
@@ -8348,11 +8348,11 @@ i, span {
   right: 0;
   padding: 15px;
   z-index: 2; }
-.iPayDateRangePicker .DateRangePicker_closeButton:focus,
-.iPayDateRangePicker .DateRangePicker_closeButton:hover {
+.DateRangePicker .DateRangePicker_closeButton:focus,
+.DateRangePicker .DateRangePicker_closeButton:hover {
   color: #b0b3b4;
   text-decoration: none; }
-.iPayDateRangePicker .DateRangePicker_closeButton_svg {
+.DateRangePicker .DateRangePicker_closeButton_svg {
   height: 15px;
   width: 15px;
   fill: #cacccd; }
