@@ -1,10 +1,22 @@
 import React, {Component} from 'react';
+import GoogleMapReact from 'google-map-react';
+
 import CampaignItem from './CampaignItem';
 import Modal from './Modal';
 import Http from '../services/Http';
 import spinner from '../images/ajax-loader.gif';
 
+const AnyReactComponent = ({text}) => <div>{text}</div>;
+
 class CampaignList extends Component {
+    static defaultProps = {
+        center: {
+            lat: 59.95,
+            lng: 30.33
+        },
+        zoom: 11
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -35,32 +47,6 @@ class CampaignList extends Component {
     }
 
     selectItem(userId) {
-        /*
-                const foo = {
-                    "id": 1,
-                    "name": "Leanne Graham",
-                    "username": "Bret",
-                    "email": "Sincere@april.biz",
-                    "address": {
-                        "street": "Kulas Light",
-                        "suite": "Apt. 556",
-                        "city": "Gwenborough",
-                        "zipcode": "92998-3874",
-                        "geo": {
-                            "lat": "-37.3159",
-                            "lng": "81.1496"
-                        }
-                    },
-                    "phone": "1-770-736-8031 x56442",
-                    "website": "hildegard.org",
-                    "company": {
-                        "name": "Romaguera-Crona",
-                        "catchPhrase": "Multi-layered client-server neural-net",
-                        "bs": "harness real-time e-markets"
-                    }
-                };
-                */
-
         this.setState({
             isLoading: true
         });
@@ -142,16 +128,60 @@ class CampaignList extends Component {
                        }}>
                     <div className="row">
                         <div className="col-md-10 col-md-offset-1">
-
-                            <pre>{JSON.stringify(user, null, 2)}</pre>
-
+                            {typeof user.address !== 'undefined' ?
+                                <div>
+                                    <address>
+                                        <strong>{user.name}</strong> <small>{user.email}</small><br/>
+                                        {user.address.street + ', ' + user.address.suite}<br/>
+                                        {user.address.city + ', ' + user.address.zipcode}<br/>
+                                        <abbr title="Phone">P:</abbr> {user.phone}
+                                    </address>
+                                    <div style={{height: '30vh', width: '100%'}}>
+                                        <GoogleMapReact
+                                            bootstrapURLKeys={{key: 'AIzaSyBZJjp8FVa0BRrelvYpIzYVm8dw3yse1qM'}}
+                                            defaultCenter={this.props.center}
+                                            defaultZoom={this.props.zoom}>
+                                            <AnyReactComponent
+                                                lat={user.address.geo.lat}
+                                                lng={user.address.geo.lng}
+                                                text={user.username}/>
+                                        </GoogleMapReact>
+                                    </div>
+                                </div> : null}
                         </div>
                     </div>
                 </Modal>
             </div>
-
         );
     }
 }
 
 export default CampaignList;
+
+/*
+        const foo = {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "Sincere@april.biz",
+            "address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874",
+                "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                }
+            },
+            "phone": "1-770-736-8031 x56442",
+            "website": "hildegard.org",
+            "company": {
+                "name": "Romaguera-Crona",
+                "catchPhrase": "Multi-layered client-server neural-net",
+                "bs": "harness real-time e-markets"
+            }
+        };
+
+        AIzaSyBZJjp8FVa0BRrelvYpIzYVm8dw3yse1qM
+        */
