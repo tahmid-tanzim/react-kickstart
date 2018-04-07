@@ -85,7 +85,7 @@ class CampaignList extends Component {
                     campaigns: [...this.state.campaigns, ...response.data],
                     isLoading: false
                 });
-                console.log('Get Success campaigns: ', JSON.stringify(this.state.campaigns, null, 2));
+                // console.log('Get Success campaigns: ', JSON.stringify(this.state.campaigns, null, 2));
             })
             .catch(error => console.error(error));
     }
