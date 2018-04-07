@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,oBASC;EARC,GAAI;IACF,OAAO,EAAE,GAAG;IACZ,SAAS,EAAE,WAAW;EAExB,IAAK;IACH,OAAO,EAAE,CAAC;IACV,SAAS,EAAE,QAAQ;AAMrB,gBAAM;ECfN,gBAAgB,ECDF,OAAO;EDWrB,KAAK,ECVK,IAAI;EDWd,MAAM,ECXI,IAAI;EDYd,aAAa,EAAE,IAAI;EACnB,MAAM,ECZC,GAAG;EDGV,mBAAmB,EAAE,IAAI;EDevB,OAAO,EAAE,YAAY;EACrB,SAAS,EAAE,iCAAiC;EAE5C,gCAAkB;IAChB,eAAe,EAAE,iBAAiB",
-"sources": ["../../../../../sass/stylesheets/components/loaders/animations/ball-beat.scss","../../../../../sass/stylesheets/components/loaders/_mixins.scss","../../../../../sass/stylesheets/components/loaders/_variables.scss"],
-"names": [],
-"file": "ball-beat.css"
-}

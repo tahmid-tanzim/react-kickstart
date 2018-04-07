@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAMA,qCAYC;EAXC,EAAG;IACD,SAAS,EAAE,UAAU;IACrB,OAAO,EAAE,CAAC;EAEZ,GAAI;IACF,SAAS,EAAE,QAAQ;IACnB,OAAO,EAAE,GAAG;EAEd,IAAK;IACH,OAAO,EAAE,GAAG;AAYhB,2BAA4B;EAG1B,QAAQ,EAAE,QAAQ;EAClB,SAAS,EAAE,iBAAsB;EAV/B,8CAAuB;IACrB,eAAe,EAAE,KAAuB;EAD1C,8CAAuB;IACrB,eAAe,EAAE,KAAuB;EAD1C,8CAAuB;IACrB,eAAe,EAAE,KAAuB;EAD1C,8CAAuB;IACrB,eAAe,EAAE,KAAuB;EAW5C,iCAAM;IC7BN,mBAAmB,EAAE,IAAI;IDgCvB,QAAQ,EAAE,QAAQ;IAClB,GAAG,EAAE,IAAI;IACT,IAAI,EAAE,KAAK;IACX,KAAK,EApCF,IAAI;IAqCP,MAAM,EArCH,IAAI;IAsCP,aAAa,EAAE,IAAI;IACnB,MAAM,EAAE,iBAAwB;IAChC,SAAS,EAAE,gFAA4E",
-"sources": ["../../../../../sass/stylesheets/components/loaders/animations/ball-scale-ripple-multiple.scss","../../../../../sass/stylesheets/components/loaders/_mixins.scss"],
-"names": [],
-"file": "ball-scale-ripple-multiple.css"
-}

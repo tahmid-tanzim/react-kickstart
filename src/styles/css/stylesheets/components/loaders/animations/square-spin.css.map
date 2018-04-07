@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,sBAaC;EAZC,GAAI;IACF,SAAS,EAAE,6CAA6C;EAE1D,GAAI;IACF,SAAS,EAAE,kDAAkD;EAE/D,GAAI;IACF,SAAS,EAAE,6CAA6C;EAE1D,IAAK;IACH,SAAS,EAAE,wCAAwC;AAMrD,kBAAM;ECfN,mBAAmB,EAAE,IAAI;EDkBvB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EEzBE,OAAO;EF0BnB,SAAS,EAAE,8DAA0D",
-"sources": ["../../../../../sass/stylesheets/components/loaders/animations/square-spin.scss","../../../../../sass/stylesheets/components/loaders/_mixins.scss","../../../../../sass/stylesheets/components/loaders/_variables.scss"],
-"names": [],
-"file": "square-spin.css"
-}

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,yBAOC;EANC,GAAI;IACF,OAAO,EAAE,GAAG;EAEd,IAAK;IACH,OAAO,EAAE,CAAC;AAcd,eAAgB;EAEd,KAAK,EAAE,IAA8B;EAVnC,kCAAuB;IACrB,eAAe,EAAE,KAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,KAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,MAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,KAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,KAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,KAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,KAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,MAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAFrD,kCAAuB;IACrB,eAAe,EAAE,KAA+B;IAChD,kBAAkB,EAAE,KAA+B;EAUvD,qBAAM;ICzBN,gBAAgB,ECDF,OAAO;IDWrB,KAAK,ECVK,IAAI;IDWd,MAAM,ECXI,IAAI;IDYd,aAAa,EAAE,IAAI;IACnB,MAAM,ECZC,GAAG;IDGV,mBAAmB,EAAE,IAAI;IDyBvB,OAAO,EAAE,YAAY;IACrB,KAAK,EAAE,IAAI;IACX,cAAc,EAAE,cAAc;IAC9B,yBAAyB,EAAE,QAAQ;IACnC,eAAe,EAAE,CAAC",
-"sources": ["../../../../../sass/stylesheets/components/loaders/animations/ball-grid-beat.scss","../../../../../sass/stylesheets/components/loaders/_mixins.scss","../../../../../sass/stylesheets/components/loaders/_variables.scss"],
-"names": [],
-"file": "ball-grid-beat.css"
-}

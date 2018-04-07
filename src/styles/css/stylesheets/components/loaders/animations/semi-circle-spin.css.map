@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAMA,sBAUC;EATC,EAAG;IACD,SAAS,EAAE,YAAY;EAEzB,GAAI;IACF,SAAS,EAAE,cAAc;EAE3B,IAAK;IACH,SAAS,EAAE,cAAc;AAI7B,iBAAkB;EAChB,QAAQ,EAAE,QAAQ;EAClB,KAAK,EAjBA,IAAI;EAkBT,MAAM,EAlBD,IAAI;EAmBT,QAAQ,EAAE,MAAM;EAEhB,uBAAM;IACJ,QAAQ,EAAE,QAAQ;IAClB,YAAY,EAAE,GAAG;IACjB,aAAa,EAAE,IAAI;IACnB,SAAS,EAAE,mCAAmC;IAC9C,gBAAgB,EAAE,2EAAoG;IACtH,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI",
-"sources": ["../../../../../sass/stylesheets/components/loaders/animations/semi-circle-spin.scss"],
-"names": [],
-"file": "semi-circle-spin.css"
-}

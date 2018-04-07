@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,4BAYC;EAXC,EAAG;IACD,SAAS,EAAE,UAAU;IACrB,OAAO,EAAE,CAAC;EAEZ,GAAI;IACF,SAAS,EAAE,QAAQ;IACnB,OAAO,EAAE,GAAG;EAEd,IAAK;IACH,OAAO,EAAE,GAAG;AAMd,wBAAM;ECdN,mBAAmB,EAAE,IAAI;EDiBvB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,aAAa,EAAE,IAAI;EACnB,MAAM,EAAE,iBAAwB;EAChC,SAAS,EAAE,oEAAgE",
-"sources": ["../../../../../sass/stylesheets/components/loaders/animations/ball-scale-ripple.scss","../../../../../sass/stylesheets/components/loaders/_mixins.scss"],
-"names": [],
-"file": "ball-scale-ripple.css"
-}

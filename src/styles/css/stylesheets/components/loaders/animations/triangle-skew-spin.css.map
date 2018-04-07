@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAKA,6BAaC;EAZC,GAAI;IACF,SAAS,EAAE,6CAA6C;EAE1D,GAAI;IACF,SAAS,EAAE,kDAAkD;EAE/D,GAAI;IACF,SAAS,EAAE,6CAA6C;EAE1D,IAAK;IACH,SAAS,EAAE,wCAAwC;AAMrD,yBAAM;ECjBN,mBAAmB,EAAE,IAAI;EDoBvB,KAAK,EAAE,CAAC;EACR,MAAM,EAAE,CAAC;EACT,WAAW,EAAE,sBAAuB;EACpC,YAAY,EAAE,sBAAuB;EACrC,aAAa,EAAE,kBAA0B;EACzC,SAAS,EAAE,qEAAiE",
-"sources": ["../../../../../sass/stylesheets/components/loaders/animations/triangle-skew-spin.scss","../../../../../sass/stylesheets/components/loaders/_mixins.scss"],
-"names": [],
-"file": "triangle-skew-spin.css"
-}
