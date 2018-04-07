@@ -32,13 +32,12 @@ class AddCampaign extends Component {
     }
 
     handleReset() {
-        const default_campaign = {
+        this.setState({
             title: "",
             body: "",
             category: "",
             isFacebookShare: true
-        };
-        this.setState(default_campaign);
+        });
     }
 
     render() {
@@ -58,7 +57,8 @@ class AddCampaign extends Component {
                                    name="title"
                                    placeholder="i.e. 15% Money Back"
                                    value={this.state.title}
-                                   onChange={this.handleChange}/>
+                                   onChange={this.handleChange} aria-describedby="helpTitle"/>
+                            <span id="helpTitle" className="help-block"><small>Title Required</small></span>
                         </div>
                     </div>
                     <div className="form-group form-group-sm">
@@ -81,7 +81,7 @@ class AddCampaign extends Component {
                             <textarea className="form-control input-sm"
                                       id="body"
                                       name="body"
-                                      rows="3"
+                                      rows="4"
                                       value={this.state.body}
                                       onChange={this.handleChange}/>
                         </div>
@@ -102,8 +102,9 @@ class AddCampaign extends Component {
                     </div>
                     <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-10">
-                            <button type="submit" className="btn btn-default btn-sm">Save</button>
-                            <button type="button" className="btn btn-link btn-sm"
+                            <button type="submit" className="btn btn-default btn-sm"
+                                    style={{marginRight: 5}}>Save</button>
+                            <button type="button" className="btn btn-default btn-sm"
                                     onClick={this.handleReset}>Reset
                             </button>
                         </div>
@@ -115,3 +116,5 @@ class AddCampaign extends Component {
 }
 
 export default AddCampaign;
+
+// input onBlur
