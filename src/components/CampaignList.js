@@ -4,20 +4,13 @@ import GoogleMapReact from 'google-map-react';
 import CampaignItem from './CampaignItem';
 import AddCampaign from './AddCampaign';
 import Modal from './Modal';
+import Alerts from './Alerts';
 import Http from '../services/Http';
 import spinner from '../images/ajax-loader.gif';
 
 const AnyReactComponent = ({text}) => <div>{text}</div>;
 
 class CampaignList extends Component {
-    static defaultProps = {
-        center: {
-            lat: 59.95,
-            lng: 30.33
-        },
-        zoom: 11
-    };
-
     constructor(props) {
         super(props);
         this.state = {
@@ -25,12 +18,15 @@ class CampaignList extends Component {
             user: {},
             modalIsOpen: false,
             isLoading: false,
-            showForm: false
+            showForm: false,
+            resetForm: false,
+            alert: null
         };
         this.deleteItem = this.deleteItem.bind(this);
         this.selectItem = this.selectItem.bind(this);
         this.onCloseModal = this.onCloseModal.bind(this);
         this.handleShowForm = this.handleShowForm.bind(this);
+        this.addItem = this.addItem.bind(this);
     }
 
     deleteItem(id) {
@@ -71,7 +67,31 @@ class CampaignList extends Component {
     }
 
     handleShowForm(flag) {
-        this.setState({showForm: flag});
+        this.setState({
+            showForm: flag,
+            alert: null
+        });
+    }
+
+    addItem({title, category, body, isFacebookShare}) {
+        this.setState({
+            isLoading: true
+        });
+
+        Http.POST('posts', {title, category, body, isFacebookShare})
+            .then(response => {
+                this.setState({
+                    campaigns: [...this.state.campaigns, response.data],
+                    alert: {
+                        message: response.statusText || "Create a New Campaign Successfully",
+                        type: 'success'
+                    },
+                    isLoading: false,
+                    resetForm: true
+                });
+                console.log('Add success campaigns: ', JSON.stringify(response, null, 2));
+            })
+            .catch(error => console.error(error));
     }
 
     componentWillMount() {
@@ -85,13 +105,12 @@ class CampaignList extends Component {
                     campaigns: [...this.state.campaigns, ...response.data],
                     isLoading: false
                 });
-                // console.log('Get Success campaigns: ', JSON.stringify(this.state.campaigns, null, 2));
             })
             .catch(error => console.error(error));
     }
 
     render() {
-        const {campaigns, user, modalIsOpen, isLoading, showForm} = this.state;
+        const {campaigns, user, modalIsOpen, isLoading, showForm, resetForm, alert} = this.state;
         return (
             <div>
                 <div className="panel panel-default table-responsive">
@@ -118,8 +137,14 @@ class CampaignList extends Component {
                     {showForm ? <div className="panel-body">
                         <div className="row">
                             <div className="col-md-7">
-                                <AddCampaign close={() => this.handleShowForm(false)}/>
+                                <AddCampaign
+                                    reset={resetForm}
+                                    save={this.addItem}
+                                    close={() => this.handleShowForm(false)}/>
                             </div>
+                            {alert ? <div className="col-md-5">
+                                <Alerts type={alert.type} value={alert.message}/>
+                            </div> : null}
                         </div>
                     </div> : null}
                     <table className="table table-striped">
@@ -177,5 +202,13 @@ class CampaignList extends Component {
         );
     }
 }
+
+CampaignList.defaultProps = {
+    center: {
+        lat: 59.95,
+        lng: 30.33
+    },
+    zoom: 11
+};
 
 export default CampaignList;

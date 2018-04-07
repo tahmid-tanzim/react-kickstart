@@ -30,13 +30,11 @@ class AddCampaign extends Component {
         this.setState({
             [name]: name === "category" ? parseInt(value, 10) : value
         });
-
-        console.log('State: ', JSON.stringify(this.state, null, 2))
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log('handleSubmit', event);
+        this.props.save(this.state);
     }
 
     handleReset() {
@@ -71,9 +69,9 @@ class AddCampaign extends Component {
         return !(title && category);
     }
 
-    componentWillMount() {
-        console.log('State: ', JSON.stringify(this.props.categoryList, null, 2))
-    }
+    // componentWillMount() {
+    //     console.log('State: ', JSON.stringify(this.props.categoryList, null, 2))
+    // }
 
     render() {
         const {categoryList} = this.props;
