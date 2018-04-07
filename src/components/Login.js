@@ -17,7 +17,7 @@ class Login extends Component {
                                    name="rememberMe" disabled/> Remember me
                         </label>
                         {/*<button className="btn btn-lg btn-primary btn-block" type="submit">Login</button>*/}
-                        <Link to="/app/settlement-reconciliation"
+                        <Link to="/app/home"
                               className="btn btn-lg btn-success btn-block">Login</Link>
                     </form>
                 </div>

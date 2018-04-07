@@ -4,11 +4,10 @@ class CampaignItem extends Component {
     render() {
         const {value: item} = this.props;
         return (
-            <tr>
-                <td> {item.id} </td>
-                <td> {item.name} </td>
-                <td> {item.email} </td>
-                <td> {item.body} </td>
+            <tr className="pointer">
+                <td onClick={() => this.props.select(item.userId)}> {item.id} </td>
+                <td onClick={() => this.props.select(item.userId)}> {item.title} </td>
+                <td onClick={() => this.props.select(item.userId)}> {item.body} </td>
                 <td>
                     <button className="btn btn-danger btn-sm" type="submit"
                             onClick={() => this.props.remove(item.id)}>

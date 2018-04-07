@@ -29,17 +29,13 @@ class Sidebar extends Component {
                             Home
                         </a>
                         <ul className="collapse list-unstyled" id="homeSubmenu">
-                            <li><Link to="/app/home">Page 1</Link></li>
-                            <li><Link to="/app/home">Page 2</Link></li>
+                            <li><Link to="/app/home">Dashboard</Link></li>
+                            <li><Link to="/app/login">Login </Link></li>
                         </ul>
                     </li>
-                    <NavItem path="/app/home">
-                        <i className="glyphicon glyphicon-link"/>
-                        Page 1
-                    </NavItem>
-                    <NavItem path="/app/home">
+                    <NavItem path="/app/campaigns">
                         <i className="glyphicon glyphicon-paperclip"/>
-                        page 2
+                        Campaigns
                     </NavItem>
                     <li>
                         <a href="https://ipay.com.bd">

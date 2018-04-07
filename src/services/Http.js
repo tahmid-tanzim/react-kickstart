@@ -6,8 +6,9 @@ const {typicode} = API;
 
 const headers = {'Content-Type': 'application/json', 'Accept': 'application/json'};
 const routes = {
-    get_posts: `${typicode}/posts`,
-    get_comments: `${typicode}/comments`
+    posts: `${typicode}/posts`,
+    users: `${typicode}/users`,
+    comments: `${typicode}/comments`
 };
 
 const encodeQueryData = data => {
@@ -31,6 +32,9 @@ const Http = {
     },
     PUT: (key, params) => {
         return axios.put(routes[key], params, headers);
+    },
+    DELETE: (key, params) => {
+        return axios.delete(routes[key] + params, headers);
     },
     UPLOAD: (key, {name, file}) => {
         const formData = new FormData();

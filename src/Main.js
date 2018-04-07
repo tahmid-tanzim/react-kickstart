@@ -5,6 +5,7 @@ import PrivateLayout from './components/PrivateLayout';
 import PublicLayout from './components/PublicLayout';
 
 import Home from './components/Home';
+import CampaignList from './components/CampaignList';
 import Login from './components/Login';
 import NotFound from './components/NotFound';
 
@@ -38,6 +39,7 @@ class Main extends Component {
                     </Route>
                     <PublicRoute path="/login" component={Login}/>
                     <PrivateRoute path="/app/home" component={Home}/>
+                    <PrivateRoute path="/app/campaigns" component={CampaignList}/>
                     <Route component={NotFound}/>
                 </Switch>
             </Router>
