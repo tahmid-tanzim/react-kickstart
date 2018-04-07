@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import GoogleMapReact from 'google-map-react';
 
 import CampaignItem from './CampaignItem';
+import AddCampaign from './AddCampaign';
 import Modal from './Modal';
 import Http from '../services/Http';
 import spinner from '../images/ajax-loader.gif';
@@ -99,9 +100,11 @@ class CampaignList extends Component {
                         }} alt="Ajax Loader"/> : null}
                     </div>
                     <div className="panel-body">
-                        <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia
-                            bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam
-                            venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <div className="row">
+                            <div className="col-md-7">
+                                <AddCampaign/>
+                            </div>
+                        </div>
                     </div>
                     <table className="table table-striped">
                         <thead>
@@ -131,7 +134,10 @@ class CampaignList extends Component {
                             {typeof user.address !== 'undefined' ?
                                 <div>
                                     <address>
-                                        <strong>{user.name}</strong> <small>{user.email}</small><br/>
+                                        <strong>{user.name}</strong>
+                                        &nbsp;
+                                        <small>{user.email}</small>
+                                        <br/>
                                         {user.address.street + ', ' + user.address.suite}<br/>
                                         {user.address.city + ', ' + user.address.zipcode}<br/>
                                         <abbr title="Phone">P:</abbr> {user.phone}
