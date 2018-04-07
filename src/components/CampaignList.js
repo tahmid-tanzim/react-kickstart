@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux'
 import GoogleMapReact from 'google-map-react';
 
 import CampaignItem from './CampaignItem';
@@ -7,6 +8,8 @@ import Modal from './Modal';
 import Alerts from './Alerts';
 import Http from '../services/Http';
 import spinner from '../images/ajax-loader.gif';
+
+import {getCampaigns} from '../actions/campaign';
 
 const AnyReactComponent = ({text}) => <div>{text}</div>;
 
@@ -103,14 +106,18 @@ class CampaignList extends Component {
             .then(response => {
                 this.setState({
                     campaigns: [...this.state.campaigns, ...response.data],
-                    isLoading: false
+                        isLoading: false
                 });
             })
             .catch(error => console.error(error));
+
+        this.props.getCampaigns();
+
     }
 
     render() {
         const {campaigns, user, modalIsOpen, isLoading, showForm, resetForm, alert} = this.state;
+        console.log('campaigns: ', JSON.stringify(this.props.test, null, 2));
         return (
             <div>
                 <div className="panel panel-default table-responsive">
@@ -211,4 +218,10 @@ CampaignList.defaultProps = {
     zoom: 11
 };
 
-export default CampaignList;
+const mapStateToProps = state => ({
+    test: state.campaignReducer.campaigns
+});
+
+export default connect(
+    mapStateToProps,
+    {getCampaigns})(CampaignList);
