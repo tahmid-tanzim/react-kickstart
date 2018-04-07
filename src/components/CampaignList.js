@@ -24,11 +24,13 @@ class CampaignList extends Component {
             campaigns: [],
             user: {},
             modalIsOpen: false,
-            isLoading: false
+            isLoading: false,
+            showForm: false
         };
         this.deleteItem = this.deleteItem.bind(this);
         this.selectItem = this.selectItem.bind(this);
         this.onCloseModal = this.onCloseModal.bind(this);
+        this.handleShowForm = this.handleShowForm.bind(this);
     }
 
     deleteItem(id) {
@@ -68,6 +70,10 @@ class CampaignList extends Component {
         this.setState({modalIsOpen: false});
     }
 
+    handleShowForm(flag) {
+        this.setState({showForm: flag});
+    }
+
     componentWillMount() {
         this.setState({
             isLoading: true
@@ -85,13 +91,23 @@ class CampaignList extends Component {
     }
 
     render() {
-        const {campaigns, user, modalIsOpen, isLoading} = this.state;
+        const {campaigns, user, modalIsOpen, isLoading, showForm} = this.state;
         return (
             <div>
                 <div className="panel panel-default table-responsive">
                     <div className="panel-heading clearfix">
                         <h3 className="panel-title pull-left"
-                            style={{padding: '7.5px 0'}}>Campaign List</h3>
+                            style={{padding: 7.5}}>Campaign List</h3>
+
+                        <button className="btn btn-default pull-right"
+                                data-toggle="tooltip"
+                                data-placement="left"
+                                title="Create New Campaign"
+                                disabled={showForm}
+                                onClick={() => this.handleShowForm(true)}>
+                            <i className="glyphicon glyphicon-plus" style={{top: 2}}/>
+                        </button>
+
                         {isLoading ? <img src={spinner} className="pull-right" style={{
                             width: 20,
                             height: 20,
@@ -99,13 +115,13 @@ class CampaignList extends Component {
                             marginRight: 10
                         }} alt="Ajax Loader"/> : null}
                     </div>
-                    <div className="panel-body">
+                    {showForm ? <div className="panel-body">
                         <div className="row">
                             <div className="col-md-7">
-                                <AddCampaign/>
+                                <AddCampaign close={() => this.handleShowForm(false)}/>
                             </div>
                         </div>
-                    </div>
+                    </div> : null}
                     <table className="table table-striped">
                         <thead>
                         <tr>
