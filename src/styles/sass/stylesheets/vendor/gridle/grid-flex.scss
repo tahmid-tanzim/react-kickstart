@@ -18,26 +18,26 @@
 
 // Max size :
 .container {
-  margin: 0 auto;
-  max-width: 960px;
+    margin: 0 auto;
+    max-width: 960px;
 }
 
 .row {
-  @include gridle_set((
-          mobile : (
-                  wrap : true
-          )
-  ));
+    @include gridle_set((
+            mobile : (
+                    wrap : true
+            )
+    ));
 }
 
 [class*="gr-"] {
-  @include gridle_set((
-          mobile : (
-                  grid : 12,
-                  push : 0,
-                  pull : 0,
-                  prefix : 0,
-                  suffix : 0
-          )
-  ));
+    @include gridle_set((
+            mobile : (
+                    grid : 12,
+                    push : 0,
+                    pull : 0,
+                    prefix : 0,
+                    suffix : 0
+            )
+    ));
 }

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 
 import NavItem from './NavItem';
@@ -14,11 +14,11 @@ class Sidebar extends Component {
 
     render() {
         return (
-            <nav id="sidebar" className={this.state.isCollapsed ? 'active' : ''}>
+            <nav id="sidebar" className={ this.state.isCollapsed ? 'active' : '' }>
                 <div className="sidebar-header pointer"
                      id="sidebarCollapse"
-                     onClick={() => this.setState({isCollapsed: !this.state.isCollapsed})}>
-                    <img src={logo} alt="iPay Logo"/>
+                     onClick={ () => this.setState({isCollapsed: !this.state.isCollapsed}) }>
+                    <img src={ logo } alt="iPay Logo"/>
                     <div className="sidebar-title">Admin Dashboard</div>
                 </div>
 

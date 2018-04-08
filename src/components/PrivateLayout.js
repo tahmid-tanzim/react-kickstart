@@ -6,10 +6,10 @@ import React from 'react';
 const PrivateLayout = ({children, ...rest}) => {
     return (
         <div className="wrapper">
-            {/*<Sidebar/>*/}
+            { /*<Sidebar/>*/ }
             <div id="content">
-                {/*<Navbar/>*/}
-                {children}
+                { /*<Navbar/>*/ }
+                { children }
             </div>
         </div>
     );

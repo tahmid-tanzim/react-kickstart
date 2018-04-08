@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import GoogleMapReact from 'google-map-react';
 
 import CampaignItem from './CampaignItem';
@@ -9,9 +9,9 @@ import Alerts from './Alerts';
 import Http from '../services/Http';
 import spinner from '../images/ajax-loader.gif';
 
-import {getCampaigns} from '../actions/campaign';
+import { getCampaigns } from '../actions/campaign';
 
-const AnyReactComponent = ({text}) => <div>{text}</div>;
+const AnyReactComponent = ({text}) => <div>{ text }</div>;
 
 class CampaignList extends Component {
     constructor(props) {
@@ -38,14 +38,14 @@ class CampaignList extends Component {
         });
 
         Http.DELETE('posts', `/${id}`)
-            .then(response => {
-                this.setState({
-                    campaigns: this.state.campaigns.filter(x => x.id !== id),
-                    isLoading: false
-                });
-                console.log('Delete success campaigns: ', JSON.stringify(response, null, 2));
-            })
-            .catch(error => console.error(error));
+        .then(response => {
+            this.setState({
+                campaigns: this.state.campaigns.filter(x => x.id !== id),
+                isLoading: false
+            });
+            console.log('Delete success campaigns: ', JSON.stringify(response, null, 2));
+        })
+        .catch(error => console.error(error));
     }
 
     selectItem(userId) {
@@ -54,15 +54,15 @@ class CampaignList extends Component {
         });
 
         Http.GET('users', `/${userId}`)
-            .then(({data}) => {
-                this.setState({
-                    modalIsOpen: true,
-                    isLoading: false,
-                    user: {...data}
-                });
-                console.log('Get success users: ', JSON.stringify(data, null, 2));
-            })
-            .catch(error => console.error(error));
+        .then(({data}) => {
+            this.setState({
+                modalIsOpen: true,
+                isLoading: false,
+                user: {...data}
+            });
+            console.log('Get success users: ', JSON.stringify(data, null, 2));
+        })
+        .catch(error => console.error(error));
     }
 
     onCloseModal() {
@@ -82,19 +82,19 @@ class CampaignList extends Component {
         });
 
         Http.POST('posts', {title, category, body, isFacebookShare})
-            .then(response => {
-                this.setState({
-                    campaigns: [...this.state.campaigns, response.data],
-                    alert: {
-                        message: response.statusText || "Create a New Campaign Successfully",
-                        type: 'success'
-                    },
-                    isLoading: false,
-                    resetForm: true
-                });
-                console.log('Add success campaigns: ', JSON.stringify(response, null, 2));
-            })
-            .catch(error => console.error(error));
+        .then(response => {
+            this.setState({
+                campaigns: [...this.state.campaigns, response.data],
+                alert: {
+                    message: response.statusText || 'Create a New Campaign Successfully',
+                    type: 'success'
+                },
+                isLoading: false,
+                resetForm: true
+            });
+            console.log('Add success campaigns: ', JSON.stringify(response, null, 2));
+        })
+        .catch(error => console.error(error));
     }
 
     componentWillMount() {
@@ -103,13 +103,13 @@ class CampaignList extends Component {
         });
 
         Http.GET('posts')
-            .then(response => {
-                this.setState({
-                    campaigns: [...this.state.campaigns, ...response.data],
-                        isLoading: false
-                });
-            })
-            .catch(error => console.error(error));
+        .then(response => {
+            this.setState({
+                campaigns: [...this.state.campaigns, ...response.data],
+                isLoading: false
+            });
+        })
+        .catch(error => console.error(error));
 
         this.props.getCampaigns();
 
@@ -123,37 +123,37 @@ class CampaignList extends Component {
                 <div className="panel panel-default table-responsive">
                     <div className="panel-heading clearfix">
                         <h3 className="panel-title pull-left"
-                            style={{padding: 7.5}}>Campaign List</h3>
+                            style={ {padding: 7.5} }>Campaign List</h3>
 
                         <button className="btn btn-default pull-right"
                                 data-toggle="tooltip"
                                 data-placement="left"
                                 title="Create New Campaign"
-                                disabled={showForm}
-                                onClick={() => this.handleShowForm(true)}>
-                            <i className="glyphicon glyphicon-plus" style={{top: 2}}/>
+                                disabled={ showForm }
+                                onClick={ () => this.handleShowForm(true) }>
+                            <i className="glyphicon glyphicon-plus" style={ {top: 2} }/>
                         </button>
 
-                        {isLoading ? <img src={spinner} className="pull-right" style={{
+                        { isLoading ? <img src={ spinner } className="pull-right" style={ {
                             width: 20,
                             height: 20,
                             marginTop: 5,
                             marginRight: 10
-                        }} alt="Ajax Loader"/> : null}
+                        } } alt="Ajax Loader"/> : null }
                     </div>
-                    {showForm ? <div className="panel-body">
+                    { showForm ? <div className="panel-body">
                         <div className="row">
                             <div className="col-md-7">
                                 <AddCampaign
-                                    reset={resetForm}
-                                    save={this.addItem}
-                                    close={() => this.handleShowForm(false)}/>
+                                    reset={ resetForm }
+                                    save={ this.addItem }
+                                    close={ () => this.handleShowForm(false) }/>
                             </div>
-                            {alert ? <div className="col-md-5">
-                                <Alerts type={alert.type} value={alert.message}/>
-                            </div> : null}
+                            { alert ? <div className="col-md-5">
+                                <Alerts type={ alert.type } value={ alert.message }/>
+                            </div> : null }
                         </div>
-                    </div> : null}
+                    </div> : null }
                     <table className="table table-striped">
                         <thead>
                         <tr>
@@ -164,44 +164,43 @@ class CampaignList extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        {campaigns.map((item, index) => <CampaignItem key={index}
-                                                                      select={this.selectItem}
-                                                                      remove={this.deleteItem}
-                                                                      value={item}/>)}
+                        { campaigns.map((item, index) => <CampaignItem key={ index }
+                                                                       select={ this.selectItem }
+                                                                       remove={ this.deleteItem }
+                                                                       value={ item }/>) }
                         </tbody>
                     </table>
                 </div>
-                <Modal id={`User_Info_Modal`}
-                       title={`User's Information`}
-                       show={modalIsOpen}
-                       action={{
+                <Modal id={ `User_Info_Modal` }
+                       title={ `User's Information` }
+                       show={ modalIsOpen }
+                       action={ {
                            close: this.onCloseModal
-                       }}>
+                       } }>
                     <div className="row">
                         <div className="col-md-10 col-md-offset-1">
-                            {typeof user.address !== 'undefined' ?
-                                <div>
-                                    <address>
-                                        <strong>{user.name}</strong>
-                                        &nbsp;
-                                        <small>{user.email}</small>
-                                        <br/>
-                                        {user.address.street + ', ' + user.address.suite}<br/>
-                                        {user.address.city + ', ' + user.address.zipcode}<br/>
-                                        <abbr title="Phone">P:</abbr> {user.phone}
-                                    </address>
-                                    <div style={{height: '30vh', width: '100%'}}>
-                                        <GoogleMapReact
-                                            bootstrapURLKeys={{key: 'AIzaSyBZJjp8FVa0BRrelvYpIzYVm8dw3yse1qM'}}
-                                            defaultCenter={this.props.center}
-                                            defaultZoom={this.props.zoom}>
-                                            <AnyReactComponent
-                                                lat={user.address.geo.lat}
-                                                lng={user.address.geo.lng}
-                                                text={user.username}/>
-                                        </GoogleMapReact>
-                                    </div>
-                                </div> : null}
+                            { typeof user.address !== 'undefined' ? <div>
+                                <address>
+                                    <strong>{ user.name }</strong>
+                                    &nbsp;
+                                    <small>{ user.email }</small>
+                                    <br/>
+                                    { user.address.street + ', ' + user.address.suite }<br/>
+                                    { user.address.city + ', ' + user.address.zipcode }<br/>
+                                    <abbr title="Phone">P:</abbr> { user.phone }
+                                </address>
+                                <div style={ {height: '30vh', width: '100%'} }>
+                                    <GoogleMapReact
+                                        bootstrapURLKeys={ {key: 'AIzaSyBZJjp8FVa0BRrelvYpIzYVm8dw3yse1qM'} }
+                                        defaultCenter={ this.props.center }
+                                        defaultZoom={ this.props.zoom }>
+                                        <AnyReactComponent
+                                            lat={ user.address.geo.lat }
+                                            lng={ user.address.geo.lng }
+                                            text={ user.username }/>
+                                    </GoogleMapReact>
+                                </div>
+                            </div> : null }
                         </div>
                     </div>
                 </Modal>

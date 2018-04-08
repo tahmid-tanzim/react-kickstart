@@ -1,4 +1,4 @@
-import {GET_CAMPAIGNS, ADD_CAMPAIGN} from '../actions/types';
+import { GET_CAMPAIGNS, ADD_CAMPAIGN } from '../actions/types';
 
 const initialState = {
     // campaign_list: {

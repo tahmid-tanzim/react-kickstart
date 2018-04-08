@@ -5,11 +5,11 @@
 @include gridle_setup((
         context : 12,
         gutter-width : 20px,
-  // gutter-left : 20px,
-  // direction : rtl,
-  // dir-attribute : true,
+    // gutter-left : 20px,
+    // direction : rtl,
+    // dir-attribute : true,
         states-classes : true,
-  // classes-prefix : 'gr-'
+    // classes-prefix : 'gr-'
 ));
 
 // register special columns
@@ -26,7 +26,7 @@
         query : "only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)",
         gutter-height : 50px,
         gutter-width : 60px
-  // direction : rtl
+    // direction : rtl
 ));
 
 // you can set css to be applied on the desired element type (grid here)

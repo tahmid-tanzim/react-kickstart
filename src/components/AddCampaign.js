@@ -1,13 +1,13 @@
-import React, {Component} from 'react';
-import {CATEGORY} from '../constant';
+import React, { Component } from 'react';
+import { CATEGORY } from '../constant';
 
 class AddCampaign extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: "",
+            title: '',
             category: 0,
-            body: "",
+            body: '',
             isFacebookShare: true,
             error: {
                 title: false,
@@ -28,7 +28,7 @@ class AddCampaign extends Component {
         const {name} = target;
 
         this.setState({
-            [name]: name === "category" ? parseInt(value, 10) : value
+            [name]: name === 'category' ? parseInt(value, 10) : value
         });
     }
 
@@ -39,9 +39,9 @@ class AddCampaign extends Component {
 
     handleReset() {
         this.setState({
-            title: "",
+            title: '',
             category: 0,
-            body: "",
+            body: '',
             isFacebookShare: true,
             error: {
                 title: false,
@@ -77,12 +77,14 @@ class AddCampaign extends Component {
         const {categoryList} = this.props;
         return (
             <div>
-                <span className="lead" style={{marginBottom: 15}}>Create New Campaign</span>
-                <a onClick={() => this.props.close()} className="pointer"><i
-                    className="glyphicon glyphicon-remove pull-right" style={{marginTop: 10}}/></a>
-                <hr style={{marginTop: 0}}/>
-                <form className="form-horizontal" onSubmit={this.handleSubmit}>
-                    <div className={"form-group form-group-sm".concat(this.state.error.title ? " has-error" : "")}>
+                <span className="lead" style={ {marginBottom: 15} }>Create New Campaign</span>
+                <a onClick={ () => this.props.close() } className="pointer"><i
+                    className="glyphicon glyphicon-remove pull-right"
+                    style={ {marginTop: 10} }/></a>
+                <hr style={ {marginTop: 0} }/>
+                <form className="form-horizontal" onSubmit={ this.handleSubmit }>
+                    <div
+                        className={ 'form-group form-group-sm'.concat(this.state.error.title ? ' has-error' : '') }>
                         <label htmlFor="title" className="col-sm-2 control-label">
                             Title<span className="text-error">*</span>
                         </label>
@@ -92,18 +94,19 @@ class AddCampaign extends Component {
                                    id="title"
                                    name="title"
                                    placeholder="i.e. 15% Money Back"
-                                   value={this.state.title}
-                                   onChange={this.handleChange}
-                                   onBlur={this.handleValidation}
+                                   value={ this.state.title }
+                                   onChange={ this.handleChange }
+                                   onBlur={ this.handleValidation }
                                    aria-describedby="helpTitle"/>
-                            {this.state.error.title ? <span id="helpTitle"
-                                                            className="help-block"
-                                                            style={{marginTop: 0}}>
-                                <small style={{fontSize: '70%'}}>Title Required</small>
-                            </span> : null}
+                            { this.state.error.title ? <span id="helpTitle"
+                                                             className="help-block"
+                                                             style={ {marginTop: 0} }>
+                                <small style={ {fontSize: '70%'} }>Title Required</small>
+                            </span> : null }
                         </div>
                     </div>
-                    <div className={"form-group form-group-sm".concat(this.state.error.category ? " has-error" : "")}>
+                    <div
+                        className={ 'form-group form-group-sm'.concat(this.state.error.category ? ' has-error' : '') }>
                         <label htmlFor="category" className="col-sm-2 control-label">
                             Category<span className="text-error">*</span>
                         </label>
@@ -111,18 +114,18 @@ class AddCampaign extends Component {
                             <select className="form-control input-sm"
                                     id="category"
                                     name="category"
-                                    value={this.state.category}
-                                    onChange={this.handleChange}
-                                    onBlur={this.handleValidation}
+                                    value={ this.state.category }
+                                    onChange={ this.handleChange }
+                                    onBlur={ this.handleValidation }
                                     aria-describedby="helpCategory">
-                                {Object.keys(categoryList).map((item, i) => <option key={i}
-                                                                                    value={item}>{categoryList[item]}</option>)}
+                                { Object.keys(categoryList).map((item, i) => <option key={ i }
+                                                                                     value={ item }>{ categoryList[item] }</option>) }
                             </select>
-                            {this.state.error.category ? <span id="helpCategory"
-                                                               className="help-block"
-                                                               style={{marginTop: 0}}>
-                                <small style={{fontSize: '70%'}}>Category Required</small>
-                            </span> : null}
+                            { this.state.error.category ? <span id="helpCategory"
+                                                                className="help-block"
+                                                                style={ {marginTop: 0} }>
+                                <small style={ {fontSize: '70%'} }>Category Required</small>
+                            </span> : null }
                         </div>
                     </div>
                     <div className="form-group form-group-sm">
@@ -132,8 +135,8 @@ class AddCampaign extends Component {
                                       id="body"
                                       name="body"
                                       rows="4"
-                                      value={this.state.body}
-                                      onChange={this.handleChange}/>
+                                      value={ this.state.body }
+                                      onChange={ this.handleChange }/>
                         </div>
                     </div>
                     <div className="form-group">
@@ -143,9 +146,11 @@ class AddCampaign extends Component {
                                     <input type="checkbox"
                                            id="isFacebookShare"
                                            name="isFacebookShare"
-                                           checked={this.state.isFacebookShare}
-                                           onChange={this.handleChange}/>
-                                    <small style={{marginTop: 2, display: 'block'}}>Share in Facebook</small>
+                                           checked={ this.state.isFacebookShare }
+                                           onChange={ this.handleChange }/>
+                                    <small style={ {marginTop: 2, display: 'block'} }>Share in
+                                        Facebook
+                                    </small>
                                 </label>
                             </div>
                         </div>
@@ -153,11 +158,11 @@ class AddCampaign extends Component {
                     <div className="form-group">
                         <div className="col-sm-offset-2 col-sm-10">
                             <button type="submit" className="btn btn-default btn-sm"
-                                    disabled={this.isValidForm()}
-                                    style={{marginRight: 5}}>Save
+                                    disabled={ this.isValidForm() }
+                                    style={ {marginRight: 5} }>Save
                             </button>
                             <button type="button" className="btn btn-default btn-sm"
-                                    onClick={this.handleReset}>Reset
+                                    onClick={ this.handleReset }>Reset
                             </button>
                         </div>
                     </div>
@@ -169,7 +174,7 @@ class AddCampaign extends Component {
 
 AddCampaign.defaultProps = {
     categoryList: {
-        0: "Please Select",
+        0: 'Please Select',
         ...CATEGORY
     }
 };

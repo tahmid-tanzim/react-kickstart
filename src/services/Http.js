@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import {API} from '../constant';
+import { API } from '../constant';
 
 const {typicode} = API;
 

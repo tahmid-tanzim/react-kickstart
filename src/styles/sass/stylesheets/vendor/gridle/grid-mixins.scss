@@ -7,44 +7,44 @@
 
 // grid elements
 .my-container {
-  @include gridle(container);
-  max-width: 960px;
-  margin: 0 auto;
+    @include gridle(container);
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .my-row {
-  @include gridle(row);
+    @include gridle(row);
 }
 
 .my-grid-12 {
-  @include gridle(12);
+    @include gridle(12);
 }
 
 .my-grid-6 {
-  @include gridle(6 tablet no-gutter);
+    @include gridle(6 tablet no-gutter);
 }
 
 #site_header,
 #site_footer {
-  @include gridle(12);
+    @include gridle(12);
 }
 
 #site_content {
-  @include gridle(8);
+    @include gridle(8);
 }
 
 #site_sidebar {
-  @include gridle(4);
-  background: blue;
+    @include gridle(4);
+    background: blue;
 }
 
 .gallery {
-  @include gridle(row);
+    @include gridle(row);
 }
 
 .gallery__item {
-  @include gridle(4);
-  height: 50px;
+    @include gridle(4);
+    height: 50px;
 }
 
 /**
@@ -55,14 +55,14 @@
 #site_content,
 #site_header,
 #site_footer {
-  background: $primary-color;
-  border: 1px solid darken($primary-color, 5%);
-  padding-top: 10px;
-  padding-bottom: 10px;
+    background: $primary-color;
+    border: 1px solid darken($primary-color, 5%);
+    padding-top: 10px;
+    padding-bottom: 10px;
 
-  &:before {
-    display: block;
-    content: attr(class);
-    font-weight: bold;
-  }
+    &:before {
+        display: block;
+        content: attr(class);
+        font-weight: bold;
+    }
 }

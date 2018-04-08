@@ -1,16 +1,16 @@
 table td a {
-  color: $pinewood-color;
+    color: $pinewood-color;
 }
 
 table td .fa-external-link {
-  display: none;
+    display: none;
 }
 
 table tr td:hover .fa-external-link {
-  display: inline;
+    display: inline;
 }
 
 .verification-block {
-  border-right: 1px solid #cdd0d4;
-  height: 280px;
+    border-right: 1px solid #cdd0d4;
+    height: 280px;
 }
