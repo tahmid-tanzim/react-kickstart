@@ -30,7 +30,7 @@ class Sidebar extends Component {
                         </a>
                         <ul className="collapse list-unstyled" id="homeSubmenu">
                             <li><Link to="/app/home">Dashboard</Link></li>
-                            <li><Link to="/app/login">Login </Link></li>
+                            <li><Link to="/login">Login </Link></li>
                         </ul>
                     </li>
                     <NavItem path="/app/campaigns">

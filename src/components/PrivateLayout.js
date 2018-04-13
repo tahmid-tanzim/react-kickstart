@@ -1,12 +1,12 @@
 import React from 'react';
 
 // import Navbar from './Navbar';
-// import Sidebar from './Sidebar';
+import Sidebar from './Sidebar';
 
 const PrivateLayout = ({children, ...rest}) => {
     return (
         <div className="wrapper">
-            { /*<Sidebar/>*/ }
+            <Sidebar/>
             <div id="content">
                 { /*<Navbar/>*/ }
                 { children }
