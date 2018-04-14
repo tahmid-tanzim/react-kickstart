@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 
 import NavItem from './NavItem';
+import { toggle } from '../actions/sidebar';
 
 class Sidebar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isCollapsed: false
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         isCollapsed: false
+    //     };
+    // }
 
     render() {
         return (
-            <nav id="sidebar" className={ this.state.isCollapsed ? 'active' : '' }>
+            <nav id="sidebar" className={ this.props.isCollapsed ? 'active' : '' }>
                 <div className="sidebar-header pointer"
                      id="sidebarCollapse"
-                     onClick={ () => this.setState({isCollapsed: !this.state.isCollapsed}) }>
+                     onClick={ () => this.props.toggle(this.props.isCollapsed) /* () => this.setState({isCollapsed: !this.state.isCollapsed}) */ }>
                     <img src={ logo } alt="iPay Logo"/>
                     <div className="sidebar-title">Admin Dashboard</div>
                 </div>
@@ -71,6 +74,15 @@ class Sidebar extends Component {
             </nav>
         );
     }
+}
+
+Sidebar.propTypes = {
+    toggle: PropTypes.func.isRequired,
+    isCollapsed: PropTypes.bool.isRequired
 };
 
-export default Sidebar;
+const mapStateToProps = state => ({
+    isCollapsed: state.sidebarReducer.isCollapsed
+});
+
+export default connect(mapStateToProps, { toggle })(Sidebar);

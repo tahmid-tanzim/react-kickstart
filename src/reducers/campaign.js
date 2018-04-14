@@ -1,4 +1,4 @@
-import { GET_CAMPAIGNS, ADD_CAMPAIGN } from '../actions/types';
+import { GET_CAMPAIGNS, ADD_CAMPAIGN, LOADING } from '../actions/types';
 
 const initialState = {
     // campaign_list: {
@@ -29,8 +29,14 @@ export default (state = initialState, action) => {
     switch (action.type) {
         case GET_CAMPAIGNS:
             let newState = {...state};
-            newState.campaigns = newState.campaigns.concat(action.payload);
+            newState.campaigns = newState.campaigns.concat(action.payload.campaigns);
+            newState.isLoading = action.payload.isLoading;
             return newState;
+        case LOADING:
+            return {
+                ...state,
+                isLoading: action.payload.isLoading
+            };
         default:
             return state;
     }

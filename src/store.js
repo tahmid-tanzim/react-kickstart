@@ -9,7 +9,8 @@ const middleware = [thunk];
 
 const enhancers = compose(
     applyMiddleware(...middleware),
-    window.devToolsExtension && window.devToolsExtension()
+    // window.devToolsExtension && window.devToolsExtension()
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 const store = createStore(
