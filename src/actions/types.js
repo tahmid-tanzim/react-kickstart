@@ -2,3 +2,4 @@ export const GET_CAMPAIGNS = 'GET_CAMPAIGNS';
 export const ADD_CAMPAIGN = 'ADD_CAMPAIGN';
 export const LOADING = 'LOADING';
 export const COLLAPSE_SIDEBAR = 'COLLAPSE_SIDEBAR';
+export const DELETE_CAMPAIGN = 'DELETE_CAMPAIGN';

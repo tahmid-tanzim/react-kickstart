@@ -27,28 +27,28 @@ class CampaignList extends Component {
             resetForm: false,
             alert: null
         };
-        this.deleteItem = this.deleteItem.bind(this);
+        // this.deleteItem = this.deleteItem.bind(this);
         this.selectItem = this.selectItem.bind(this);
         this.onCloseModal = this.onCloseModal.bind(this);
         this.handleShowForm = this.handleShowForm.bind(this);
         this.addItem = this.addItem.bind(this);
     }
 
-    deleteItem(id) {
-        this.setState({
-            isLoading: true
-        });
-
-        Http.DELETE('posts', `/${id}`)
-        .then(response => {
-            this.setState({
-                campaigns: this.state.campaigns.filter(x => x.id !== id),
-                isLoading: false
-            });
-            console.log('Delete success campaigns: ', JSON.stringify(response, null, 2));
-        })
-        .catch(error => console.error(error));
-    }
+    // deleteItem(id) {
+    //     this.setState({
+    //         isLoading: true
+    //     });
+    //
+    //     Http.DELETE('posts', `/${id}`)
+    //     .then(response => {
+    //         this.setState({
+    //             campaigns: this.state.campaigns.filter(x => x.id !== id),
+    //             isLoading: false
+    //         });
+    //         console.log('Delete success campaigns: ', JSON.stringify(response, null, 2));
+    //     })
+    //     .catch(error => console.error(error));
+    // }
 
     selectItem(userId) {
         this.setState({
@@ -118,8 +118,8 @@ class CampaignList extends Component {
 
     render() {
         const {campaigns, user, modalIsOpen, isLoading, showForm, resetForm, alert} = this.state;
-        console.log('campaigns: ', JSON.stringify(this.props.campaigns, null, 2));
-        console.log('isLoading: ', JSON.stringify(this.props.isLoading, null, 2));
+        // console.log('campaigns: ', JSON.stringify(this.props.campaigns, null, 2));
+        // console.log('isLoading: ', JSON.stringify(this.props.isLoading, null, 2));
         return (
             <div>
                 <div className="panel panel-default table-responsive">
@@ -168,7 +168,6 @@ class CampaignList extends Component {
                         <tbody>
                         { this.props.campaigns.map((item, index) => <CampaignItem key={ index }
                                                                        select={ this.selectItem }
-                                                                       remove={ this.deleteItem }
                                                                        value={ item }/>) }
                         </tbody>
                     </table>
