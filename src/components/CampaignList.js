@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { createSelector } from 'reselect';
 import GoogleMapReact from 'google-map-react';
 
 import CampaignItem from './CampaignItem';
@@ -224,9 +225,13 @@ CampaignList.propTypes = {
     isLoading: PropTypes.bool.isRequired
 };
 
-const mapStateToProps = state => ({
-    campaigns: state.campaignReducer.campaigns,
-    isLoading: state.campaignReducer.isLoading
-});
+const mapStateToProps = createSelector(
+    state => state.campaignReducer,
+    ({campaigns, isLoading}) => ({campaigns, isLoading})
+);
 
-export default connect(mapStateToProps, { getCampaigns })(CampaignList);
+const mapActionsToProps = {
+    getCampaigns
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(CampaignList);
