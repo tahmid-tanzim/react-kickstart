@@ -5,3 +5,5 @@
 
 Selector Library for Redux
 https://github.com/reactjs/reselect
+
+Chrome Extension: `Redux DevTools`
