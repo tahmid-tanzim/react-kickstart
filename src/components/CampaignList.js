@@ -98,26 +98,26 @@ class CampaignList extends Component {
     }
 
     componentWillMount() {
-        this.setState({
-            isLoading: true
-        });
-
-        Http.GET('posts')
-        .then(response => {
-            this.setState({
-                campaigns: [...this.state.campaigns, ...response.data],
-                isLoading: false
-            });
-        })
-        .catch(error => console.error(error));
+        // this.setState({
+        //     isLoading: true
+        // });
+        //
+        // Http.GET('posts')
+        // .then(response => {
+        //     this.setState({
+        //         campaigns: [...this.state.campaigns, ...response.data],
+        //         isLoading: false
+        //     });
+        // })
+        // .catch(error => console.error(error));
 
         this.props.getCampaigns();
-
     }
 
     render() {
         const {campaigns, user, modalIsOpen, isLoading, showForm, resetForm, alert} = this.state;
-        console.log('campaigns: ', JSON.stringify(this.props.test, null, 2));
+        console.log('campaigns: ', JSON.stringify(this.props.campaigns, null, 2));
+        console.log('isLoading: ', JSON.stringify(this.props.isLoading, null, 2));
         return (
             <div>
                 <div className="panel panel-default table-responsive">
@@ -134,7 +134,7 @@ class CampaignList extends Component {
                             <i className="glyphicon glyphicon-plus" style={ {top: 2} }/>
                         </button>
 
-                        { isLoading ? <img src={ spinner } className="pull-right" style={ {
+                        { this.props.isLoading ? <img src={ spinner } className="pull-right" style={ {
                             width: 20,
                             height: 20,
                             marginTop: 5,
@@ -164,7 +164,7 @@ class CampaignList extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        { campaigns.map((item, index) => <CampaignItem key={ index }
+                        { this.props.campaigns.map((item, index) => <CampaignItem key={ index }
                                                                        select={ this.selectItem }
                                                                        remove={ this.deleteItem }
                                                                        value={ item }/>) }
@@ -218,7 +218,8 @@ CampaignList.defaultProps = {
 };
 
 const mapStateToProps = state => ({
-    test: state.campaignReducer.campaigns
+    campaigns: state.campaignReducer.campaigns,
+    isLoading: state.campaignReducer.isLoading
 });
 
 export default connect(
