@@ -11,7 +11,7 @@ import Alerts from './Alerts';
 import Http from '../services/Http';
 import spinner from '../images/ajax-loader.gif';
 
-import { getCampaigns } from '../actions/campaign';
+import { getCampaigns, selectCampaign, toggleModal } from '../actions/campaign';
 
 const AnyReactComponent = ({text}) => <div>{ text }</div>;
 
@@ -51,24 +51,27 @@ class CampaignList extends Component {
     // }
 
     selectItem(userId) {
-        this.setState({
-            isLoading: true
-        });
+        // this.setState({
+        //     isLoading: true
+        // });
+        //
+        // Http.GET('users', `/${userId}`)
+        // .then(({data}) => {
+        //     this.setState({
+        //         modalIsOpen: true,
+        //         isLoading: false,
+        //         user: {...data}
+        //     });
+        //     console.log('Get success users: ', JSON.stringify(data, null, 2));
+        // })
+        // .catch(error => console.error(error));
 
-        Http.GET('users', `/${userId}`)
-        .then(({data}) => {
-            this.setState({
-                modalIsOpen: true,
-                isLoading: false,
-                user: {...data}
-            });
-            console.log('Get success users: ', JSON.stringify(data, null, 2));
-        })
-        .catch(error => console.error(error));
+        this.props.selectCampaign(userId);
     }
 
     onCloseModal() {
-        this.setState({modalIsOpen: false});
+        // this.setState({modalIsOpen: false});
+        this.props.toggleModal(false);
     }
 
     handleShowForm(flag) {
@@ -117,7 +120,8 @@ class CampaignList extends Component {
     }
 
     render() {
-        const {campaigns, user, modalIsOpen, isLoading, showForm, resetForm, alert} = this.state;
+        const {showForm, resetForm, alert} = this.state;
+        const {campaigns, user, modalIsOpen, isLoading} = this.props;
         // console.log('campaigns: ', JSON.stringify(this.props.campaigns, null, 2));
         // console.log('isLoading: ', JSON.stringify(this.props.isLoading, null, 2));
         return (
@@ -136,7 +140,7 @@ class CampaignList extends Component {
                             <i className="glyphicon glyphicon-plus" style={ {top: 2} }/>
                         </button>
 
-                        { this.props.isLoading ? <img src={ spinner } className="pull-right" style={ {
+                        { isLoading ? <img src={ spinner } className="pull-right" style={ {
                             width: 20,
                             height: 20,
                             marginTop: 5,
@@ -166,9 +170,11 @@ class CampaignList extends Component {
                         </tr>
                         </thead>
                         <tbody>
-                        { this.props.campaigns.map((item, index) => <CampaignItem key={ index }
+                        { campaigns.map((item, index) => <CampaignItem key={ index }
                                                                        select={ this.selectItem }
-                                                                       value={ item }/>) }
+                                                                       value={ item }/>)
+                            // remove={ this.deleteItem }
+                        }
                         </tbody>
                     </table>
                 </div>
@@ -220,17 +226,23 @@ CampaignList.defaultProps = {
 
 CampaignList.propTypes = {
     getCampaigns: PropTypes.func.isRequired,
+    selectCampaign: PropTypes.func.isRequired,
+    toggleModal: PropTypes.func.isRequired,
     campaigns: PropTypes.array.isRequired,
-    isLoading: PropTypes.bool.isRequired
+    user: PropTypes.object.isRequired,
+    isLoading: PropTypes.bool.isRequired,
+    modalIsOpen: PropTypes.bool.isRequired
 };
 
 const mapStateToProps = createSelector(
     state => state.campaignReducer,
-    ({campaigns, isLoading}) => ({campaigns, isLoading})
+    ({campaigns, isLoading, modalIsOpen, user}) => ({campaigns, isLoading, modalIsOpen, user})
 );
 
 const mapActionsToProps = {
-    getCampaigns
+    getCampaigns,
+    selectCampaign,
+    toggleModal
 };
 
 export default connect(mapStateToProps, mapActionsToProps)(CampaignList);

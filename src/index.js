@@ -18,5 +18,15 @@ registerServiceWorker();
  * Hot Module Replacement (HMR)
  * */
 
-module.hot && module.hot.accept();
+// module.hot && module.hot.accept();
 
+// if (module.hot) {
+//     let acceptCallback = () => {
+//         const nextRootReducer = combineReducers(require('./redux/reducers/index'));
+//         store.replaceReducer(nextRootReducer);
+//     };
+//
+//     // Enable Webpack hot module replacement for reducers
+//     module.hot.accept('./redux/reducers/index', acceptCallback);
+//     module.hot.acceptCallback = acceptCallback;
+// }
