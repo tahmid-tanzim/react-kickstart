@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import GoogleMapReact from 'google-map-react';
 
@@ -217,11 +218,15 @@ CampaignList.defaultProps = {
     zoom: 11
 };
 
+CampaignList.propTypes = {
+    getCampaigns: PropTypes.func.isRequired,
+    campaigns: PropTypes.array.isRequired,
+    isLoading: PropTypes.bool.isRequired
+};
+
 const mapStateToProps = state => ({
     campaigns: state.campaignReducer.campaigns,
     isLoading: state.campaignReducer.isLoading
 });
 
-export default connect(
-    mapStateToProps,
-    {getCampaigns})(CampaignList);
+export default connect(mapStateToProps, { getCampaigns })(CampaignList);
