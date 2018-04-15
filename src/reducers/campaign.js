@@ -1,4 +1,4 @@
-import { GET_CAMPAIGNS, ADD_CAMPAIGN, LOADING } from '../actions/types';
+import { GET_CAMPAIGNS, ADD_CAMPAIGN, TOGGLE_MODAL, GET_CAMPAIGN, DELETE_CAMPAIGN, LOADING } from '../actions/types';
 
 const initialState = {
     // campaign_list: {
@@ -26,18 +26,30 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
+    let newState = {...state};
     switch (action.type) {
         case GET_CAMPAIGNS:
-            let newState = {...state};
             newState.campaigns = newState.campaigns.concat(action.payload.campaigns);
             newState.isLoading = action.payload.isLoading;
             return newState;
         case LOADING:
             return {
-                ...state,
+                ...newState,
                 isLoading: action.payload.isLoading
             };
+        case GET_CAMPAIGN:
+            newState.modalIsOpen = action.payload.modalIsOpen;
+            newState.isLoading = action.payload.isLoading;
+            newState.user = action.payload.user;
+            return newState;
+        case DELETE_CAMPAIGN:
+            newState.campaigns = newState.campaigns.filter(x => x.id !== action.payload.id);
+            newState.isLoading = action.payload.isLoading;
+            return newState;
+        case TOGGLE_MODAL:
+            newState.modalIsOpen =  action.payload.modalIsOpen;
+            return newState;
         default:
-            return state;
+            return newState;
     }
 }

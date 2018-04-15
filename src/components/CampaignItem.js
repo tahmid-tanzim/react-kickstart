@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { deleteCampaign } from '../actions/campaign';
 
 class CampaignItem extends Component {
     render() {
@@ -10,7 +13,7 @@ class CampaignItem extends Component {
                 <td onClick={ () => this.props.select(item.userId) }> { item.body } </td>
                 <td>
                     <button className="btn btn-danger btn-sm" type="submit"
-                            onClick={ () => this.props.remove(item.id) }>
+                            onClick={ () => this.props.deleteCampaign(item.id) }>
                         <i className="glyphicon glyphicon-trash" aria-hidden="true"/>
                     </button>
                 </td>
@@ -19,4 +22,12 @@ class CampaignItem extends Component {
     }
 }
 
-export default CampaignItem;
+CampaignItem.propTypes = {
+    deleteCampaign: PropTypes.func.isRequired
+};
+
+const mapActionsToProps = {
+    deleteCampaign
+};
+
+export default connect(null, mapActionsToProps)(CampaignItem);
