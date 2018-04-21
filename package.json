@@ -109,6 +109,7 @@
   },
   "devDependencies": {
     "node-sass": "^4.8.3",
+    "react-test-renderer": "^16.3.2",
     "serve": "^6.5.3"
   }
 }
