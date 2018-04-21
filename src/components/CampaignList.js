@@ -102,7 +102,7 @@ class CampaignList extends Component {
         .catch(error => console.error(error));
     }
 
-    componentWillMount() {
+    componentDidMount() {
         // this.setState({
         //     isLoading: true
         // });
