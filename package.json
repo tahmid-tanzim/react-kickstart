@@ -6,7 +6,7 @@
   "dependencies": {
     "ajv": "^6.4.0",
     "autoprefixer": "7.1.6",
-    "axios": "^0.21.1",
+    "axios": "^1.8.2",
     "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "^26.6.3",
